@@ -1,0 +1,12 @@
+I:\Yasir\CSharpLearning\CSharpLearning\bin\Debug\netcoreapp3.1\CSharpLearning.exe
+I:\Yasir\CSharpLearning\CSharpLearning\bin\Debug\netcoreapp3.1\CSharpLearning.deps.json
+I:\Yasir\CSharpLearning\CSharpLearning\bin\Debug\netcoreapp3.1\CSharpLearning.runtimeconfig.json
+I:\Yasir\CSharpLearning\CSharpLearning\bin\Debug\netcoreapp3.1\CSharpLearning.runtimeconfig.dev.json
+I:\Yasir\CSharpLearning\CSharpLearning\bin\Debug\netcoreapp3.1\CSharpLearning.dll
+I:\Yasir\CSharpLearning\CSharpLearning\bin\Debug\netcoreapp3.1\CSharpLearning.pdb
+I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.AssemblyInfoInputs.cache
+I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.AssemblyInfo.cs
+I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.csproj.CoreCompileInputs.cache
+I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.dll
+I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.pdb
+I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.genruntimeconfig.cache
