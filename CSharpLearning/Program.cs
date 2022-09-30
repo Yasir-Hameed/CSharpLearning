@@ -16,8 +16,11 @@ namespace CSharpLearning
             // EvenoOddNumber();
             // StudentGrades();
             // CalculateProfitandLoss();
-            HelloWorld();
-
+            // HelloWorld();
+            // HelloWorldfor();
+            // HelloWorldDoWhile();
+            // Table();
+           //  Factorial();
         }
 
         #region IF-Else Programs
@@ -274,6 +277,9 @@ namespace CSharpLearning
 
         #region Loops Programms
 
+        /// <summary>
+        /// Print Hello World on basis of user input via while loop
+        /// </summary>
         static void HelloWorld()
 
         {
@@ -287,6 +293,77 @@ namespace CSharpLearning
 
             }
 
+        }
+
+        /// <summary>
+        /// Print Hello World via For Loop
+        /// </summary>
+        static void HelloWorldfor()
+        {
+            int i, num;
+            Console.WriteLine("Insert Number to Repeat");
+            num = int.Parse(Console.ReadLine());
+
+            for ( i = 1; i <= num; i++)
+            {
+                Console.WriteLine("Hello World");
+            }
+        }
+
+        /// <summary>
+        /// Use do While Loop
+        /// </summary>
+        static void HelloWorldDoWhile()
+        {
+            int i=1, num;
+            Console.WriteLine("Insert Number to Repeat");
+            num = int.Parse(Console.ReadLine());
+
+            do
+            {
+                Console.WriteLine("Hello World");
+                i++;
+            } 
+            while (i <= num);
+        }
+
+        /// <summary>
+        /// Insert Table through initial and endValues
+        /// </summary>
+        static void Table()
+        {
+            int initialValue, table, endValue;
+
+            Console.WriteLine("Insert Number of Required Table");
+            table = int.Parse(Console.ReadLine());
+            Console.WriteLine("Insert initialValue");
+            initialValue = int.Parse(Console.ReadLine());
+            Console.WriteLine("Insert end Number");
+            endValue = int.Parse(Console.ReadLine());
+
+            while (initialValue<=endValue)
+            {
+                Console.WriteLine($"{table}*{initialValue} = {table*initialValue}");
+                initialValue++;
+            }
+            
+        }
+
+        /// <summary>
+        /// Factorial Calculation
+        /// </summary>
+        static void Factorial()
+        {
+            int initialValue = 1, userInput, result = 1;
+
+            Console.WriteLine("Insert UserInput");
+            userInput = int.Parse(Console.ReadLine());
+            while (initialValue<=userInput)
+            {
+                result = result * initialValue;
+                initialValue++;
+            }
+            Console.WriteLine($"Factorial = {result}");
         }
 
         #endregion
