@@ -20,7 +20,11 @@ namespace CSharpLearning
             // HelloWorldfor();
             // HelloWorldDoWhile();
             // Table();
-           //  Factorial();
+            // Factorial();
+            // FactorialSelf();
+            // series();
+            // EvenSum();
+
         }
 
         #region IF-Else Programs
@@ -304,7 +308,7 @@ namespace CSharpLearning
             Console.WriteLine("Insert Number to Repeat");
             num = int.Parse(Console.ReadLine());
 
-            for ( i = 1; i <= num; i++)
+            for (i = 1; i <= num; i++)
             {
                 Console.WriteLine("Hello World");
             }
@@ -315,7 +319,7 @@ namespace CSharpLearning
         /// </summary>
         static void HelloWorldDoWhile()
         {
-            int i=1, num;
+            int i = 1, num;
             Console.WriteLine("Insert Number to Repeat");
             num = int.Parse(Console.ReadLine());
 
@@ -323,7 +327,7 @@ namespace CSharpLearning
             {
                 Console.WriteLine("Hello World");
                 i++;
-            } 
+            }
             while (i <= num);
         }
 
@@ -341,12 +345,12 @@ namespace CSharpLearning
             Console.WriteLine("Insert end Number");
             endValue = int.Parse(Console.ReadLine());
 
-            while (initialValue<=endValue)
+            while (initialValue <= endValue)
             {
-                Console.WriteLine($"{table}*{initialValue} = {table*initialValue}");
+                Console.WriteLine($"{table}*{initialValue} = {table * initialValue}");
                 initialValue++;
             }
-            
+
         }
 
         /// <summary>
@@ -358,7 +362,7 @@ namespace CSharpLearning
 
             Console.WriteLine("Insert UserInput");
             userInput = int.Parse(Console.ReadLine());
-            while (initialValue<=userInput)
+            while (initialValue <= userInput)
             {
                 result = result * initialValue;
                 initialValue++;
@@ -366,7 +370,75 @@ namespace CSharpLearning
             Console.WriteLine($"Factorial = {result}");
         }
 
-        #endregion
+        /// <summary>
+        /// Factorial By Self
+        /// </summary>
+        static void FactorialSelf()
+        {
+            int initialValue = 1, userinput, result = 1;
+
+            Console.WriteLine("Enter Input");
+            userinput = int.Parse(Console.ReadLine());
+
+            while (initialValue <= userinput)
+            {
+                result = result * initialValue;
+                initialValue++;
+            }
+            Console.WriteLine($"Seiries is: {result}");
+        }
+
+        static void series()
+        {
+            float firstValue = 1, sumValue = 1, input;
+
+            Console.WriteLine("Enter Input");
+            input = float.Parse(Console.ReadLine());
+
+            while (firstValue <= input)
+            {
+                if (firstValue % 2 == 0)
+                {
+                    sumValue = sumValue + sumValue * 1 / firstValue;
+                }
+                firstValue++;
+            }
+            Console.WriteLine($"Print Sum Value{sumValue}");
+
+
+
+            #endregion
+        }
+
+        /// <summary>
+        /// Count the Even sum and Odd Sum
+        /// </summary>
+        static void EvenSum()
+        {
+            int firstNum = 1, userInput, evenSum = 0, oddSum=0;
+
+            Console.WriteLine("Please Enter User Input");
+            userInput = int.Parse(Console.ReadLine());
+
+            while (firstNum <= userInput)
+            {
+                if (firstNum % 2 == 0)
+                {
+                    evenSum = evenSum + firstNum;
+                }
+                else
+                {
+                    oddSum = oddSum + firstNum;
+                }
+            
+               firstNum ++;
+            }
+            Console.WriteLine($"EvenSum is: {evenSum}");
+            Console.WriteLine($"OddSum is: {oddSum}");
+
+        }
+
+
     }
 }
 
