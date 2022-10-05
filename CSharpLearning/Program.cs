@@ -24,6 +24,14 @@ namespace CSharpLearning
             // FactorialSelf();
             // series();
             // EvenSum();
+            //  PrintArray();
+            // OddNumberArray();
+            // EvenSumandOddSum();
+            // ShortTypeEvenSumandOddSum();
+            FunctionsLearning Function = new FunctionsLearning();
+            Function.NoReturnNoInput();
+
+
 
         }
 
@@ -438,7 +446,118 @@ namespace CSharpLearning
 
         }
 
+        /// <summary>
+        /// Use of Foreach Loop
+        /// </summary>
+        static void PrintArray()
+        {
+            int[] array = { 1, 2, 3, 4, 5 };
+
+            foreach (var item in array)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        /// <summary>
+        /// Identify Even Numbers via foreach loop
+        /// </summary>
+        static void OddNumberArray()
+        {
+            int sizeOfArray, count = 0;  int[] arrayName;
+           
+            Console.WriteLine("Please Enter Your Numbers");
+            sizeOfArray = int.Parse(Console.ReadLine());
+
+            arrayName = new int[sizeOfArray];
+
+            Console.WriteLine($"Plz Enter Elements");
+
+            foreach (var item in arrayName)
+            {
+                arrayName[count] = int.Parse(Console.ReadLine());
+                count++;
+            }
+
+            foreach (var item in arrayName)
+            {
+                if (item % 2 == 0)
+                {
+                    Console.WriteLine($"Even Numbers{item}");
+                }
+            }     
+        }
+
+        /// <summary>
+        /// Take input from User in Array & find sum of Even and Odd via foreach 
+        /// </summary>
+        static void EvenSumandOddSum()
+        {
+            int sizeOfArray; int[] array; int count=0, evenSum = 0, oddSum = 0;
+
+            Console.WriteLine("Please Enter your Size of Array");
+            sizeOfArray = int.Parse(Console.ReadLine());
+
+             array = new int[sizeOfArray];
+            Console.WriteLine("Please Enter your Elements");
+
+            foreach (var item in array)
+            {
+                array[count] = int.Parse(Console.ReadLine());
+                count++;
+            }
+            
+            foreach (var item in array)
+            {
+                if(item%2==0)
+                {
+                    evenSum = evenSum + item;
+                   
+                }
+                else
+                {
+                    oddSum = oddSum + item;
+                    
+                }
+               
+            }
+            Console.WriteLine($"Sum of Odd Number is: {oddSum}");
+            Console.WriteLine($"Sum of Even Numbers is: {evenSum}");
+        }
+
+        /// <summary>
+        /// Short Type: Take input from User in Array & find sum of Even and Odd via foreach
+        /// </summary>
+        static void ShortTypeEvenSumandOddSum()
+        {
+            int sizeOfArray; int[] array; int count = 0, evenSum = 0, oddSum = 0;
+
+            Console.WriteLine("Please Enter your Size of Array");
+            sizeOfArray = int.Parse(Console.ReadLine());
+
+            array = new int[sizeOfArray];
+            Console.WriteLine("Please Enter your Elements");
+
+            foreach (var item in array)
+            {
+                array[count] = int.Parse(Console.ReadLine());
+                count++;
+                
+                if (item % 2 == 0)
+                {
+                    evenSum = evenSum + item;
+
+                }
+                else
+                {
+                    oddSum = oddSum + item;
+
+                }
+            }
+            Console.WriteLine($"Sum of Odd Number is: {oddSum}");
+            Console.WriteLine($"Sum of Even Numbers is: {evenSum}");
+        }
 
     }
-}
 
+}
