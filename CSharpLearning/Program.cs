@@ -4,36 +4,31 @@ namespace CSharpLearning
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            // ArithmaticalOperations();
-            // AreaMeasurement();
-            // InterestRate();
-            // Swapping();
-            // Admission();
-            // MaximumNumber();
-            // MaximumNumberWithNestedIf();
-            // EvenoOddNumber();
-            // StudentGrades();
-            // CalculateProfitandLoss();
-            // HelloWorld();
-            // HelloWorldfor();
-            // HelloWorldDoWhile();
-            // Table();
-            // Factorial();
-            // FactorialSelf();
-            // series();
-            // EvenSum();
-            //  PrintArray();
-            // OddNumberArray();
-            // EvenSumandOddSum();
-            // ShortTypeEvenSumandOddSum();
-            FunctionsLearning Function = new FunctionsLearning();
-            Function.NoReturnNoInput();
-
-
-
-        }
+        //static void Main(string[] args)
+        //{
+        //    // ArithmaticalOperations();
+        //    // AreaMeasurement();
+        //    // InterestRate();
+        //    // Swapping();
+        //    // Admission();
+        //    // MaximumNumber();
+        //    // MaximumNumberWithNestedIf();
+        //    // EvenoOddNumber();
+        //    // StudentGrades();
+        //    // CalculateProfitandLoss();
+        //    // HelloWorld();
+        //    // HelloWorldfor();
+        //    // HelloWorldDoWhile();
+        //    // Table();
+        //    // Factorial();
+        //    // FactorialSelf();
+        //    // series();
+        //    // EvenSum();
+        //    //  PrintArray();
+        //    // OddNumberArray();
+        //    // EvenSumandOddSum();
+        //    // ShortTypeEvenSumandOddSum();
+        //}
 
         #region IF-Else Programs
 
