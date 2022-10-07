@@ -6,58 +6,73 @@ namespace CSharpLearning
 {
    public  class FunctionsLearning
     {
-        static void Main()
+       static void Main()
         {
             FunctionsLearning Object = new FunctionsLearning();
 
-            #region Functions of int Types
+            #region Functions of int Types Definition
 
-            Object.NoReturnNoInput();
+            //Object.NoReturnNoInput();
 
-            int sumResult = Object.ReturnWithNoInput();
-            Console.WriteLine($"Sum of a and B is: {sumResult}");
-
-
-            int sumRes = Object.ReturnWithInput(10, 15);
-            Console.WriteLine($"Sum of a and B is: {sumRes}");
-
-            Object.NoReturnWithInput(10, 20);
-
-            #endregion
+            //int sumResult = Object.ReturnWithNoInput();
+            //Console.WriteLine($"Sum of a and B is: {sumResult}");
 
 
-            #region Functions of String Types
+            //int sumRes = Object.ReturnWithInput(10, 15);
+            //Console.WriteLine($"Sum of a and B is: {sumRes}");
 
-            string Firstname, Lastname, Fullname;
-            Console.WriteLine("Please Enter First Name");
-            Firstname = (Console.ReadLine());
-            Console.WriteLine("Please Enter Last Name");
-            Lastname = (Console.ReadLine());
-           
-            Fullname = Object.StringInputwithReturn(Firstname, Lastname);
-            Console.WriteLine($"Fullname: {Fullname}");
+            //Object.NoReturnWithInput(10, 20);
 
-            string firstName, lastName;
-            Console.WriteLine("Please Enter First Name");
-            firstName = (Console.ReadLine());
-            Console.WriteLine("Please Enter Last Name");
-            lastName = (Console.ReadLine());
-           
-            Object.StringInputWithNoReturn(firstName, lastName);
 
-            Fullname = Object.StringNoInputWithReturn();
-            Console.WriteLine($"Fullname: {Fullname}");
 
-            Object.StringNoInputNoReturn();
-
-            Object.StringNoInputWithReturn();
-
-            
 
             #endregion
+
+
+            //#region Functions of String Types
+
+            //string Firstname, Lastname, Fullname;
+            //Console.WriteLine("Please Enter First Name");
+            //Firstname = (Console.ReadLine());
+            //Console.WriteLine("Please Enter Last Name");
+            //Lastname = (Console.ReadLine());
+
+            //Fullname = Object.StringInputwithReturn(Firstname, Lastname);
+            //Console.WriteLine($"Fullname: {Fullname}");
+
+            //string firstName, lastName;
+            //Console.WriteLine("Please Enter First Name");
+            //firstName = (Console.ReadLine());
+            //Console.WriteLine("Please Enter Last Name");
+            //lastName = (Console.ReadLine());
+
+            //Object.StringInputWithNoReturn(firstName, lastName);
+
+            //Fullname = Object.StringNoInputWithReturn();
+            //Console.WriteLine($"Fullname: {Fullname}");
+
+            //Object.StringNoInputNoReturn();
+
+            //Object.StringNoInputWithReturn();
+
+            //int[] array = arrayValues();
+
+            //int maxValue = Object.ReturnMaxValue(array);
+
+            //string evenOrOdd = maxNumOddorEven(maxValue);
+
+            //Console.WriteLine(evenOrOdd);
+
+
+            CombinedProgram();
+
+            //#endregion
 
         }
 
+        //--------------------------Functions------------------------
+
+        #region Functions of Ints Implementations
 
         /// <summary>
         /// We will use Void key for No Return and No Input due to no parameters in ()
@@ -94,18 +109,94 @@ namespace CSharpLearning
         }
 
         /// <summary>
-        ///  We will use void whcich will Return value with Input in parameter ()
+        /// Taking Inputs in Array
         /// </summary>
-        /// <param name="firstValue"></param>
-        /// <param name="secondValue"></param>
-        public void NoReturnWithInput(int firstValue, int secondValue)
+        /// <returns></returns>
+        public static int[] arrayValues()
+        {
+            int sizeOfArray; int[] array; int count = 0;
+
+            Console.WriteLine("Enter Size of Array");
+            sizeOfArray = int.Parse(Console.ReadLine());
+
+            array = new int[sizeOfArray];
+            Console.WriteLine("Enter Numbers");
+
+
+            foreach (var item in array)
+            {
+                array[count] = int.Parse(Console.ReadLine());
+                count++;
+
+            }
+            return array;
+        }
+
+        /// <summary>
+        /// To Find Max Value from an Array
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
+        public int ReturnMaxValue(int[] array)
+        {
+            int max = 0, count = 0;
+            foreach (var item in array)
+            {
+                if (max<array[count])
+                {
+                    max = array[count];
+                    count++;
+                }
+                
+            }
+            return max;
+        }
+
+        /// Find Max Number is Even or Odd///
+        /// 
+
+        public static string maxNumOddorEven(int max)
+        {
+            string evenOrOdd;
+
+            if (max % 2 == 0)
+            {
+                evenOrOdd = $"Max Number is Even: + {max}";
+            }
+            else
+            {
+                evenOrOdd = $"Max Number is Odd: + {max}";
+            }
+            return evenOrOdd;
+        }
+
+         /// <summary>
+    ///  We will use void whcich will Return value with Input in parameter ()
+    /// </summary>
+    /// <param name="firstValue"></param>
+    /// <param name="secondValue"></param>
+         public void NoReturnWithInput(int firstValue, int secondValue)
         {
             int sum = firstValue + secondValue;
             Console.WriteLine($"Total Sum is: {sum}");
         }
 
-        ///String Function///
+        public static void CombinedProgram()
+        {
+            FunctionsLearning functionsLearning = new FunctionsLearning();
+            int[] array = arrayValues();
 
+            int maxValue = functionsLearning.ReturnMaxValue(array);
+
+            string evenOrOdd = maxNumOddorEven(maxValue);
+
+            Console.WriteLine(evenOrOdd);
+        }
+
+        #endregion
+
+
+        #region functions of Strings
         public void StringNoInputNoReturn()
         {
             string Firstname, Lastname;
@@ -136,6 +227,9 @@ namespace CSharpLearning
         {
            Console.WriteLine($"Full Name is:  ,{ firstName},{ lastName}");
         }
+
+        #endregion
+
     }
 
 }

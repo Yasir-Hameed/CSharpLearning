@@ -6,28 +6,29 @@ namespace CSharpLearning
     {
         //static void Main(string[] args)
         //{
-        //    // ArithmaticalOperations();
-        //    // AreaMeasurement();
-        //    // InterestRate();
-        //    // Swapping();
-        //    // Admission();
-        //    // MaximumNumber();
-        //    // MaximumNumberWithNestedIf();
-        //    // EvenoOddNumber();
-        //    // StudentGrades();
-        //    // CalculateProfitandLoss();
-        //    // HelloWorld();
-        //    // HelloWorldfor();
-        //    // HelloWorldDoWhile();
-        //    // Table();
-        //    // Factorial();
-        //    // FactorialSelf();
-        //    // series();
-        //    // EvenSum();
-        //    //  PrintArray();
-        //    // OddNumberArray();
-        //    // EvenSumandOddSum();
-        //    // ShortTypeEvenSumandOddSum();
+        //    //    // ArithmaticalOperations();
+        //    //    // AreaMeasurement();
+        //    //    // InterestRate();
+        //    //    // Swapping();
+        //    //    // Admission();
+        //    //    // MaximumNumber();
+        //    //    // MaximumNumberWithNestedIf();
+        //    //    // EvenoOddNumber();
+        //    //    // StudentGrades();
+        //    //    // CalculateProfitandLoss();
+        //    //    // HelloWorld();
+        //    //    // HelloWorldfor();
+        //    //    // HelloWorldDoWhile();
+        //    //    // Table();
+        //    //    // Factorial();
+        //    //    // FactorialSelf();
+        //    //    // series();
+        //    //    // EvenSum();
+        //    //    //  PrintArray();
+        //    //    // OddNumberArray();
+        //    //    // EvenSumandOddSum();
+        //    //    // ShortTypeEvenSumandOddSum();
+        //    MaxandMinNumber();
         //}
 
         #region IF-Else Programs
@@ -553,6 +554,30 @@ namespace CSharpLearning
             Console.WriteLine($"Sum of Even Numbers is: {evenSum}");
         }
 
+        public static void MaxandMinNumber()
+        {
+            int sizeOfArray; int[] array; int count=0, Max=0;
+
+            Console.WriteLine("Enter Size of Array");
+            sizeOfArray = int.Parse(Console.ReadLine());
+
+            array = new int[sizeOfArray];
+            Console.WriteLine("Enter Numbers: ");
+
+            foreach (var item in array)
+            {
+                array[count] = int.Parse(Console.ReadLine());
+                if (Max<array[count])
+                {
+                    Max = array[count];
+                }
+                count++;
+            }
+            Console.WriteLine($"Max Number is: {Max}");
+                
+                
+
+        }
     }
 
 }
