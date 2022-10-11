@@ -63,8 +63,7 @@ namespace CSharpLearning
 
             //Console.WriteLine(evenOrOdd);
 
-
-            CombinedProgram();
+            //CombinedProgram();
 
             //#endregion
 
@@ -142,6 +141,7 @@ namespace CSharpLearning
             int max = 0, count = 0;
             foreach (var item in array)
             {
+                Console.WriteLine($"Item is: {item}");
                 if (max<array[count])
                 {
                     max = array[count];
@@ -227,6 +227,12 @@ namespace CSharpLearning
         {
            Console.WriteLine($"Full Name is:  ,{ firstName},{ lastName}");
         }
+
+        #endregion
+
+        #region Methods of String
+
+        
 
         #endregion
 

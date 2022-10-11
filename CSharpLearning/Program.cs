@@ -578,6 +578,25 @@ namespace CSharpLearning
                 
 
         }
+
+        public static void stringSplitMethod()
+        {
+            string Name = "My Name is Yasir Hameed Khan";
+            string[] array = Name.split(' '); int i = 0;
+
+            foreach (var item in array)
+            {
+                if (i<array.Length)
+                {
+                    Console.ReadLine
+
+                }
+                i++;
+            }
+
+
+        }
+
     }
 
 }

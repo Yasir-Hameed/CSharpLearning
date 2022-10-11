@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpLearning", "CSharpLearning.csproj", "{18908A49-BA89-4BEB-AA81-C7E277F2AAD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpLearning", "CSharpLearning.csproj", "{18908A49-BA89-4BEB-AA81-C7E277F2AAD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpLogicalPrograms", "CSharpLogicalPrograms", "{46327E27-247E-48A6-B9C3-74DCFBAE6865}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OOPs", "OOPs", "{5DDFFDF1-37CA-472A-BF97-42C7AA29B2A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP", "..\OOP\OOP.csproj", "{892718E8-9F07-4A69-A991-53E53EDA6743}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{18908A49-BA89-4BEB-AA81-C7E277F2AAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18908A49-BA89-4BEB-AA81-C7E277F2AAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18908A49-BA89-4BEB-AA81-C7E277F2AAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892718E8-9F07-4A69-A991-53E53EDA6743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892718E8-9F07-4A69-A991-53E53EDA6743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892718E8-9F07-4A69-A991-53E53EDA6743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892718E8-9F07-4A69-A991-53E53EDA6743}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{18908A49-BA89-4BEB-AA81-C7E277F2AAD6} = {46327E27-247E-48A6-B9C3-74DCFBAE6865}
+		{892718E8-9F07-4A69-A991-53E53EDA6743} = {5DDFFDF1-37CA-472A-BF97-42C7AA29B2A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04E7ACF9-1C06-4B61-9C14-49A0518C6698}
