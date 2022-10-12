@@ -4,6 +4,7 @@ namespace OOP.ObjInitialize
 {
     class Animal
     {
+        // By Default Constructor
         public Animal()
         {
 

@@ -14,7 +14,7 @@ namespace OOP.ObjInitialize
 
         }
 
-        public Dump(String eats, String runs, String sees)
+        public Dump(string eats, string runs, string sees)
         {
             this.eats = eats;
             this.runs = runs;
