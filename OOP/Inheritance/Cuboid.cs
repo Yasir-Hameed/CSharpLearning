@@ -14,5 +14,10 @@ namespace OOP.Inheritance
             WidthR = Width;
         }
 
+        public Cuboid(int Length,int width, int Height)
+        {
+            
+        }
+
     }
 }

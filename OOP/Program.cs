@@ -51,8 +51,15 @@ namespace OOP
             Console.WriteLine(objcub.Area());
 
             Console.WriteLine(objcub.parameter());
-           
 
+            OverrideingP ObjOver = new OverrideingP();
+
+            OverLoading ObjLoad = new OverLoading(1,2);
+            OverLoading ObjLoadOther = new OverLoading();
+            ObjLoad.Add();
+            ObjLoadOther.Add(1, 1.0f, 2.0f);
+            ObjLoadOther.Add(1,2f,2.4f);
+            ObjLoadOther.Add(1.0,2.0,2.4f);
         }
     }
 }

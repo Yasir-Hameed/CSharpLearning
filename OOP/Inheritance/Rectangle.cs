@@ -4,8 +4,6 @@ namespace OOP.Inheritance
     public class Rectangle
     {
        public int LengthR, WidthR;
-
-    
         public int Area()
         {
 
