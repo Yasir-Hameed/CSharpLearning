@@ -1,35 +1,76 @@
-﻿using System;
+﻿using CSharpLearning.CSharpList;
+using System;
+using System.Collections.Generic;
 
 namespace CSharpLearning
 {
     class Program
     {
-        //static void Main(string[] args)
-        //{
-        //    //    // ArithmaticalOperations();
-        //    //    // AreaMeasurement();
-        //    //    // InterestRate();
-        //    //    // Swapping();
-        //    //    // Admission();
-        //    //    // MaximumNumber();
-        //    //    // MaximumNumberWithNestedIf();
-        //    //    // EvenoOddNumber();
-        //    //    // StudentGrades();
-        //    //    // CalculateProfitandLoss();
-        //    //    // HelloWorld();
-        //    //    // HelloWorldfor();
-        //    //    // HelloWorldDoWhile();
-        //    //    // Table();
-        //    //    // Factorial();
-        //    //    // FactorialSelf();
-        //    //    // series();
-        //    //    // EvenSum();
-        //    //    //  PrintArray();
-        //    //    // OddNumberArray();
-        //    //    // EvenSumandOddSum();
-        //    //    // ShortTypeEvenSumandOddSum();
-        //    MaxandMinNumber();
-        //}
+        static void Main(string[] args)
+        {
+            //    // ArithmaticalOperations();
+            //    // AreaMeasurement();
+            //    // InterestRate();
+            //    // Swapping();
+            //    // Admission();
+            //    // MaximumNumber();
+            //    // MaximumNumberWithNestedIf();
+            //    // EvenoOddNumber();
+            //    // StudentGrades();
+            //    // CalculateProfitandLoss();
+            //    // HelloWorld();
+            //    // HelloWorldfor();
+            //    // HelloWorldDoWhile();
+            //    // Table();
+            //    // Factorial();
+            //    // FactorialSelf();
+            //    // series();
+            //    // EvenSum();
+            //    //  PrintArray();
+            //    // OddNumberArray();
+            //    // EvenSumandOddSum();
+            //    // ShortTypeEvenSumandOddSum();
+            //    MaxandMinNumber();
+            string[] lastname = new string[4];
+            lastname[2] = "ali";
+            lastname[3] = "ali";
+            lastname[1] = "ali";
+
+            List<Employee> employeesDb = new List<Employee>();
+            List<string> names = new List<string>();
+            string name1 = "usama";
+            string name2 = "usama";
+            string name3 = "usama";
+            string name4 = "usama";
+            names.Add(name1);
+            names.Add(name2);
+            names.Add(name3);
+            names.Add(name4);
+            names.Add("khan");
+            List<string[]> listoflanames = new List<string[]>();
+            listoflanames.Add(lastname);
+            
+
+
+            // Employee Object Declaration 
+            Employee employee = new Employee();
+
+            // Employee Object Initialization
+
+                employee.empID = 1;
+                employee.empAge = 18;
+                employee.empName = "Asif";
+
+            // Employee Added using List Method Add().
+               employeesDb.Add(employee);
+
+            // Diplay Employee from EmployeeDb List
+
+            Console.WriteLine(employeesDb[0].empAge);
+            Console.WriteLine(employeesDb[0].empID);
+            Console.WriteLine(employeesDb[0].empName);
+
+        }
 
         #region IF-Else Programs
 
@@ -582,13 +623,13 @@ namespace CSharpLearning
         public static void stringSplitMethod()
         {
             string Name = "My Name is Yasir Hameed Khan";
-            string[] array = Name.split(' '); int i = 0;
+            string[] array = Name.Split(' '); int i = 0;
 
             foreach (var item in array)
             {
                 if (i<array.Length)
                 {
-                    Console.ReadLine
+                    Console.ReadLine();
 
                 }
                 i++;
@@ -596,6 +637,9 @@ namespace CSharpLearning
 
 
         }
+
+        
+
 
     }
 

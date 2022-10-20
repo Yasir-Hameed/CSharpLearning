@@ -6,68 +6,68 @@ namespace CSharpLearning
 {
    public  class FunctionsLearning
     {
-       static void Main()
-        {
-            FunctionsLearning Object = new FunctionsLearning();
+       //static void Main()
+       // {
+       //     FunctionsLearning Object = new FunctionsLearning();
 
-            #region Functions of int Types Definition
+       //     #region Functions of int Types Definition
 
-            //Object.NoReturnNoInput();
+       //     //Object.NoReturnNoInput();
 
-            //int sumResult = Object.ReturnWithNoInput();
-            //Console.WriteLine($"Sum of a and B is: {sumResult}");
-
-
-            //int sumRes = Object.ReturnWithInput(10, 15);
-            //Console.WriteLine($"Sum of a and B is: {sumRes}");
-
-            //Object.NoReturnWithInput(10, 20);
+       //     //int sumResult = Object.ReturnWithNoInput();
+       //     //Console.WriteLine($"Sum of a and B is: {sumResult}");
 
 
+       //     //int sumRes = Object.ReturnWithInput(10, 15);
+       //     //Console.WriteLine($"Sum of a and B is: {sumRes}");
+
+       //     //Object.NoReturnWithInput(10, 20);
 
 
-            #endregion
 
 
-            //#region Functions of String Types
+       //     #endregion
 
-            //string Firstname, Lastname, Fullname;
-            //Console.WriteLine("Please Enter First Name");
-            //Firstname = (Console.ReadLine());
-            //Console.WriteLine("Please Enter Last Name");
-            //Lastname = (Console.ReadLine());
 
-            //Fullname = Object.StringInputwithReturn(Firstname, Lastname);
-            //Console.WriteLine($"Fullname: {Fullname}");
+       //     //#region Functions of String Types
 
-            //string firstName, lastName;
-            //Console.WriteLine("Please Enter First Name");
-            //firstName = (Console.ReadLine());
-            //Console.WriteLine("Please Enter Last Name");
-            //lastName = (Console.ReadLine());
+       //     //string Firstname, Lastname, Fullname;
+       //     //Console.WriteLine("Please Enter First Name");
+       //     //Firstname = (Console.ReadLine());
+       //     //Console.WriteLine("Please Enter Last Name");
+       //     //Lastname = (Console.ReadLine());
 
-            //Object.StringInputWithNoReturn(firstName, lastName);
+       //     //Fullname = Object.StringInputwithReturn(Firstname, Lastname);
+       //     //Console.WriteLine($"Fullname: {Fullname}");
 
-            //Fullname = Object.StringNoInputWithReturn();
-            //Console.WriteLine($"Fullname: {Fullname}");
+       //     //string firstName, lastName;
+       //     //Console.WriteLine("Please Enter First Name");
+       //     //firstName = (Console.ReadLine());
+       //     //Console.WriteLine("Please Enter Last Name");
+       //     //lastName = (Console.ReadLine());
 
-            //Object.StringNoInputNoReturn();
+       //     //Object.StringInputWithNoReturn(firstName, lastName);
 
-            //Object.StringNoInputWithReturn();
+       //     //Fullname = Object.StringNoInputWithReturn();
+       //     //Console.WriteLine($"Fullname: {Fullname}");
 
-            //int[] array = arrayValues();
+       //     //Object.StringNoInputNoReturn();
 
-            //int maxValue = Object.ReturnMaxValue(array);
+       //     //Object.StringNoInputWithReturn();
 
-            //string evenOrOdd = maxNumOddorEven(maxValue);
+       //     int[] array = arrayValues();
 
-            //Console.WriteLine(evenOrOdd);
+       //     int maxValue = Object.ReturnMaxValue(array);
 
-            //CombinedProgram();
+       //     string evenOrOdd = Object.maxNumOddorEven(maxValue);
 
-            //#endregion
+       //     //Console.WriteLine(evenOrOdd);
 
-        }
+       //     CombinedProgram();
+
+       //     //#endregion
+
+       // }
 
         //--------------------------Functions------------------------
 
@@ -125,6 +125,7 @@ namespace CSharpLearning
             foreach (var item in array)
             {
                 array[count] = int.Parse(Console.ReadLine());
+                Console.WriteLine($"Array is: {array[count]}");
                 count++;
 
             }
@@ -155,7 +156,7 @@ namespace CSharpLearning
         /// Find Max Number is Even or Odd///
         /// 
 
-        public static string maxNumOddorEven(int max)
+        public string maxNumOddorEven(int max)
         {
             string evenOrOdd;
 
@@ -188,7 +189,7 @@ namespace CSharpLearning
 
             int maxValue = functionsLearning.ReturnMaxValue(array);
 
-            string evenOrOdd = maxNumOddorEven(maxValue);
+            string evenOrOdd = functionsLearning.maxNumOddorEven(maxValue);
 
             Console.WriteLine(evenOrOdd);
         }
