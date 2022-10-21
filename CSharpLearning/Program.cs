@@ -1,6 +1,7 @@
 ﻿using CSharpLearning.CSharpList;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CSharpLearning
 {
@@ -31,44 +32,29 @@ namespace CSharpLearning
             //    // EvenSumandOddSum();
             //    // ShortTypeEvenSumandOddSum();
             //    MaxandMinNumber();
-            string[] lastname = new string[4];
-            lastname[2] = "ali";
-            lastname[3] = "ali";
-            lastname[1] = "ali";
+           
+            // Employee List Declaration 
 
-            List<Employee> employeesDb = new List<Employee>();
-            List<string> names = new List<string>();
-            string name1 = "usama";
-            string name2 = "usama";
-            string name3 = "usama";
-            string name4 = "usama";
-            names.Add(name1);
-            names.Add(name2);
-            names.Add(name3);
-            names.Add(name4);
-            names.Add("khan");
-            List<string[]> listoflanames = new List<string[]>();
-            listoflanames.Add(lastname);
-            
+            List<Employee> employeeList = new List<Employee>();
 
+            Console.WriteLine("How many employees you want to entered?");
+            int numberOfUsers = int.Parse(Console.ReadLine());
 
-            // Employee Object Declaration 
-            Employee employee = new Employee();
+            employeeList = GetEmployeeList(numberOfUsers);
 
-            // Employee Object Initialization
+           // Diplay Employee from EmployeeDb List
 
-                employee.empID = 1;
-                employee.empAge = 18;
-                employee.empName = "Asif";
+            DisplayEmployee(employeeList);
 
-            // Employee Added using List Method Add().
-               employeesDb.Add(employee);
+            Console.WriteLine("Which Employee want to delete, Please entered the Id");
 
-            // Diplay Employee from EmployeeDb List
+            var empID = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(employeesDb[0].empAge);
-            Console.WriteLine(employeesDb[0].empID);
-            Console.WriteLine(employeesDb[0].empName);
+            DeleteEmployee(empID, employeeList);
+
+            // Display Employee from EmployeeDb List
+
+            DisplayEmployee(employeeList);
 
         }
 
@@ -638,8 +624,49 @@ namespace CSharpLearning
 
         }
 
-        
+        public static List<Employee> GetEmployeeList(int numberOfUsers)
+        {
+            List<Employee> employees = new List<Employee>();
+               
 
+            for (int i = 0; i < numberOfUsers; i++)
+            {
+                // Employee Object Declaration 
+                 Employee employeeObj = new Employee();
+
+                // Employee Object Initialization
+
+                Console.WriteLine("Enter Employee ID");
+                employeeObj.empID = int.Parse(Console.ReadLine());
+                Console.WriteLine("Please Enter Your Age");
+                employeeObj.empAge = int.Parse(Console.ReadLine());
+                Console.WriteLine("Please Enter Your Name");
+                employeeObj.empName = Console.ReadLine();
+
+                // Employee Added using List Method Add().
+                employees.Add(employeeObj);
+            }
+
+            return employees;
+        }
+
+        public static void DisplayEmployee(List<Employee> employees)
+        {
+            foreach (var item in employees)
+            {
+                Console.WriteLine(item.empAge);
+                Console.WriteLine(item.empID);
+                Console.WriteLine(item.empName);
+            }
+
+        }
+
+        public static void DeleteEmployee(int Id, List<Employee> employees)
+        {
+                        var emp = employees.Where(x => x.empID == Id).First();
+
+            employees.Remove(emp);
+        }
 
     }
 
