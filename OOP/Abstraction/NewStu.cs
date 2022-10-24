@@ -16,5 +16,10 @@ namespace OOP.Abstraction
         {
             Console.WriteLine("Present");
         }
+
+        public void StaffAttendance()
+        {
+            Console.WriteLine("Present");
+        }
     }
 }

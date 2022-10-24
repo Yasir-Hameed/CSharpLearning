@@ -3,6 +3,7 @@
     interface IStudent
     {
         public void StudentPass();
-        public void StudentFail();
+        public void StudentFail(string condition);
+        void Ship();
     }
 }

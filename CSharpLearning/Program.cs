@@ -370,16 +370,17 @@ namespace CSharpLearning
             int initialValue, table, endValue;
 
             Console.WriteLine("Insert Number of Required Table");
-            table = int.Parse(Console.ReadLine());
+            table = int.Parse(Console.ReadLine());//4
             Console.WriteLine("Insert initialValue");
             initialValue = int.Parse(Console.ReadLine());
-            Console.WriteLine("Insert end Number");
-            endValue = int.Parse(Console.ReadLine());
+            Console.WriteLine("Insert end Number");//2
+            endValue = int.Parse(Console.ReadLine());//10
 
-            while (initialValue <= endValue)
+            while(initialValue < endValue)
             {
                 Console.WriteLine($"{table}*{initialValue} = {table * initialValue}");
-                initialValue++;
+                break;
+                //initialValue++;
             }
 
         }
@@ -599,6 +600,11 @@ namespace CSharpLearning
                     Max = array[count];
                 }
                 count++;
+            }
+
+            for(var i = 0; i < array.Length; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
             }
             Console.WriteLine($"Max Number is: {Max}");
                 

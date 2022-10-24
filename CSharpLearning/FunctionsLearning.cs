@@ -211,7 +211,7 @@ namespace CSharpLearning
         public string StringInputwithReturn(string Firstname,string Lastname)
         {
             string FullName;
-            FullName = string.Concat(Firstname + Lastname);
+            FullName = string.Concat(Firstname, Lastname);
             return FullName;
         }
         public string StringNoInputWithReturn()
