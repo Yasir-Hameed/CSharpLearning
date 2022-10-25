@@ -1,9 +1,9 @@
 ﻿namespace OOP.Abstraction
 {
-    interface IStudent
+  public  interface IStudent
     {
         public void StudentPass();
         public void StudentFail(string condition);
-        void Ship();
+       public void Ship();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using OOP.Abstraction;
+using OOP.InCapsulation;
 using OOP.Inheritance;
 using OOP.ObjInitialize;
 using System;
@@ -83,6 +84,29 @@ namespace OOP
 
             IStore StoreObj1 = new Store();
             StoreObj1.StoreOpen();
+
+            Employee employee = new Employee();
+            employee.GetEmpId();
+
+            employee.EmployeeId1 = 1;
+
+            Console.WriteLine(employee.EmployeeId1);
+
+            StudentCap studentobj1 = new StudentCap();
+
+            Console.WriteLine("Please Enter First Name");
+            studentobj1.FirstName = (Console.ReadLine());
+
+            Console.WriteLine("Please Enter Last Name");
+            studentobj1.LastName = (Console.ReadLine());
+
+            Console.WriteLine("Please Enter Roll No.");
+            studentobj1.RollNo = int.Parse(Console.ReadLine());
+
+            IStudentCap studentCapObj = new StudentCapRepo();
+            
+            studentCapObj.AddStudent(studentobj1);
+           
 
         }
     }

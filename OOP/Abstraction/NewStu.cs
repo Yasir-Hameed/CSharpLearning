@@ -17,9 +17,14 @@ namespace OOP.Abstraction
             Console.WriteLine("Present");
         }
 
-        public void StaffAttendance()
+        public void StudentFail(string condition)
         {
-            Console.WriteLine("Present");
+            throw new NotImplementedException();
+        }
+
+        public void Ship()
+        {
+            throw new NotImplementedException();
         }
     }
 }
