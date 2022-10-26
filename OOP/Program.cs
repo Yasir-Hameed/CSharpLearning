@@ -93,26 +93,14 @@ namespace OOP
 
             Console.WriteLine(employee.EmployeeId1);
 
-            StudentCap studentobj1 = new StudentCap();
-
-            Console.WriteLine("Please Enter First Name");
-            studentobj1.FirstName = (Console.ReadLine());
-
-            Console.WriteLine("Please Enter Last Name");
-            studentobj1.LastName = (Console.ReadLine());
-
-            Console.WriteLine("Please Enter Roll No.");
-            studentobj1.RollNo = int.Parse(Console.ReadLine());
-
             int NumberOfEntries = 0;
             Console.WriteLine("How many Candidates You want to enter");
             NumberOfEntries = int.Parse(Console.ReadLine());
+                       
+            IStudentCap studentService = new StudentCapRepo();
 
-            IStudentCap studentCapObj = new StudentCapRepo();
-
-            List<StudentCap> studentList = new List<StudentCap>();
-
-            for (int i = 0; i <= NumberOfEntries; i++)
+            List<StudentCap> NewStudentList = new List<StudentCap>();
+            for (int i = 0; i < NumberOfEntries; i++)
             {
                 StudentCap newStudent = new StudentCap();
 
@@ -124,19 +112,18 @@ namespace OOP
 
                 Console.WriteLine("Please Enter Roll No.");
                 newStudent.RollNo = int.Parse(Console.ReadLine());
-                studentList.Add(newStudent);
 
+                NewStudentList.Add(newStudent);
+                
 
                 //Console.WriteLine($"Total Entries are:{studentobj1.NumberOfEntries}");
 
             }
 
-            studentCapObj.AddStudent(studentList);
+            studentService.AddStudent(NewStudentList);
 
 
-
-
-            studentCapObj.DisplayStudent();
+            studentService.DisplayStudent();
         }
     }
 }

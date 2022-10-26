@@ -9,17 +9,16 @@ namespace OOP.InCapsulation
         List<StudentCap> StudentDb = new List<StudentCap>();
 
 
-        public void  AddStudent(List<StudentCap> studentCaps)
+        public void  AddStudent(List<StudentCap> NewStudentList)
         {
-            StudentDb.AddRange(studentCaps);
-           
+            StudentDb.AddRange(NewStudentList);           
         }
 
-        public void AddStudent(StudentCap studentCaps)
-        {
-            StudentDb.Add(studentCaps);
+        //public void AddStudent(StudentCap studentCaps)
+        //{
+        //    StudentDb.Add(studentCaps);
 
-        }
+        //}
 
         public void DisplayStudent()
         {
@@ -28,7 +27,7 @@ namespace OOP.InCapsulation
                 Console.WriteLine($"My First Name:{item.FirstName}");
                 Console.WriteLine($"My Last Name:{item.LastName}");
                 Console.WriteLine($"My Roll No: {item.RollNo}");
-                Console.WriteLine($"Total Entries:{item.NumberOfEntries}");
+
             }
         }
 
