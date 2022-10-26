@@ -7,5 +7,7 @@ namespace OOP.InCapsulation
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        public int NumberOfEntries { get; set; }
+
     }
 }

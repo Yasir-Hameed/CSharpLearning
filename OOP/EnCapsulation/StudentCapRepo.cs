@@ -11,13 +11,14 @@ namespace OOP.InCapsulation
         {
             StudentDb.Add(studentobj1);
         }
-        public void DisplayStudent (StudentCap studentobj1)
+
+        public void DisplayStudent()
         {
             foreach (var item in StudentDb)
             {
-                Console.WriteLine($"First Name:{item.FirstName}");
-                Console.WriteLine($"Last Name:{item.LastName}");
-                Console.WriteLine($"Rol No: {item.RollNo}");
+                Console.WriteLine($"My First Name:{item.FirstName}");
+                Console.WriteLine($"My Last Name:{item.LastName}");
+                Console.WriteLine($"My Roll No: {item.RollNo}");
             }
         }
 

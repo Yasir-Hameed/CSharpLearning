@@ -8,6 +8,6 @@ namespace OOP.InCapsulation
     {
         public void AddStudent(StudentCap studentobj1);
         
-      public void DisplayStudent(StudentCap studentobj1);
+        public void DisplayStudent();
     }
 }

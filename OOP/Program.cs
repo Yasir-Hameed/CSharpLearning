@@ -103,11 +103,14 @@ namespace OOP
             Console.WriteLine("Please Enter Roll No.");
             studentobj1.RollNo = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("How many Candidates You want to enter");
+
+
             IStudentCap studentCapObj = new StudentCapRepo();
             
             studentCapObj.AddStudent(studentobj1);
-           
 
+            studentCapObj.DisplayStudent();
         }
     }
 }
