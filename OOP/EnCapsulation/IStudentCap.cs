@@ -6,8 +6,8 @@ namespace OOP.InCapsulation
 {
     interface IStudentCap
     {
-        public void AddStudent(StudentCap studentobj1);
+        void AddStudent(List<StudentCap> studentCaps);
         
-        public void DisplayStudent();
+        void DisplayStudent();
     }
 }

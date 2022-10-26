@@ -7,9 +7,18 @@ namespace OOP.InCapsulation
     class StudentCapRepo : IStudentCap
     {
         List<StudentCap> StudentDb = new List<StudentCap>();
-        public void  AddStudent(StudentCap studentobj1)
+
+
+        public void  AddStudent(List<StudentCap> studentCaps)
         {
-            StudentDb.Add(studentobj1);
+            StudentDb.AddRange(studentCaps);
+           
+        }
+
+        public void AddStudent(StudentCap studentCaps)
+        {
+            StudentDb.Add(studentCaps);
+
         }
 
         public void DisplayStudent()
@@ -19,6 +28,7 @@ namespace OOP.InCapsulation
                 Console.WriteLine($"My First Name:{item.FirstName}");
                 Console.WriteLine($"My Last Name:{item.LastName}");
                 Console.WriteLine($"My Roll No: {item.RollNo}");
+                Console.WriteLine($"Total Entries:{item.NumberOfEntries}");
             }
         }
 

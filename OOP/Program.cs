@@ -3,6 +3,7 @@ using OOP.InCapsulation;
 using OOP.Inheritance;
 using OOP.ObjInitialize;
 using System;
+using System.Collections.Generic;
 
 namespace OOP
 {
@@ -103,12 +104,37 @@ namespace OOP
             Console.WriteLine("Please Enter Roll No.");
             studentobj1.RollNo = int.Parse(Console.ReadLine());
 
+            int NumberOfEntries = 0;
             Console.WriteLine("How many Candidates You want to enter");
-
+            NumberOfEntries = int.Parse(Console.ReadLine());
 
             IStudentCap studentCapObj = new StudentCapRepo();
-            
-            studentCapObj.AddStudent(studentobj1);
+
+            List<StudentCap> studentList = new List<StudentCap>();
+
+            for (int i = 0; i <= NumberOfEntries; i++)
+            {
+                StudentCap newStudent = new StudentCap();
+
+                Console.WriteLine("Please Enter First Name");
+                newStudent.FirstName = (Console.ReadLine());
+
+                Console.WriteLine("Please Enter Last Name");
+                newStudent.LastName = (Console.ReadLine());
+
+                Console.WriteLine("Please Enter Roll No.");
+                newStudent.RollNo = int.Parse(Console.ReadLine());
+                studentList.Add(newStudent);
+
+
+                //Console.WriteLine($"Total Entries are:{studentobj1.NumberOfEntries}");
+
+            }
+
+            studentCapObj.AddStudent(studentList);
+
+
+
 
             studentCapObj.DisplayStudent();
         }
