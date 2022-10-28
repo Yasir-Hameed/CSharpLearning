@@ -93,11 +93,11 @@ namespace OOP
 
             //Console.WriteLine(employee.EmployeeId1); 
 
-           
+
             //int NumberOfEntries = 0;
             //Console.WriteLine("How many Candidates You want to enter");
             //NumberOfEntries = int.Parse(Console.ReadLine());
-                       
+
             //IStudentCap studentService = new StudentCapRepo();
 
             //List<StudentCap> NewStudentList = new List<StudentCap>();
@@ -116,7 +116,7 @@ namespace OOP
             //    newStudent.RollNo = int.Parse(Console.ReadLine());
 
             //    NewStudentList.Add(newStudent);
-                
+
 
             //    //Console.WriteLine($"Total Entries are:{studentobj1.NumberOfEntries}");
 
@@ -127,16 +127,66 @@ namespace OOP
 
             //studentService.DisplayStudent();
 
-            string[] animal = { "Cow", "Goat", "Horse" };
+            //string[] animal = { "Cow", "Goat", "Horse" };
 
-            List<string> animalList = new List<string>();
+            //List<string> animalList = new List<string>();
 
-            animalList.AddRange(animal);
+            //for (int i = 0; i <= 5; i++)
+            //{
+            //    Console.WriteLine($"Please Enter {i} Name:");
 
-            foreach (string item in animalList)
+            //    animalList.Add(Console.ReadLine());
+
+            //}
+
+            //animalList.AddRange(animal);
+
+            //foreach (string item in animalList)
+            //{
+            //    Console.WriteLine(item);
+
+            //}
+
+           
+            List<int> TableList = new List<int>(4);
+
+            int x, y;
+            
+            for (int i = 0; i < 4 ; i++)
             {
-                Console.WriteLine("item");
+                Console.WriteLine("Please Enter First Value");
+                x = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Please Enter Second");
+                y = int.Parse(Console.ReadLine());
+
+               int Result1 = x * y;
+
+                TableList.Add(Result1);
             }
+            foreach (var item in TableList)
+            {
+                Console.WriteLine($"Result is: {item}");
+            }
+
+            int F, S, T;
+
+            Console.WriteLine("Please Enter First Value");
+            F = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Please Enter Second Value");
+            S = int.Parse(Console.ReadLine());
+
+            T = F;
+            F = S;
+            S = T;
+
+            Console.WriteLine($"Result is: {F}{S}");
+
+            string[] {"Yasir", "Hameed","Khan" };
+
+
+
 
 
 

@@ -22,7 +22,7 @@ namespace CSharpLearning
             //    // HelloWorld();
             //    // HelloWorldfor();
             //    // HelloWorldDoWhile();
-            //    // Table();
+             Table();
             //    // Factorial();
             //    // FactorialSelf();
             //    // series();
