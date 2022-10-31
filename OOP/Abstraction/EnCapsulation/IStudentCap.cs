@@ -6,7 +6,9 @@ namespace OOP.InCapsulation
 {
     interface IStudentCap
     {
+        List<StudentCap> TakingUserInputs();
         void DisplayStudent();
         void AddStudent(List<StudentCap> studentList);
+        void DeleteStudent(int id);
     }
 }

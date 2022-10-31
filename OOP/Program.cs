@@ -94,38 +94,21 @@ namespace OOP
             //Console.WriteLine(employee.EmployeeId1); 
 
 
-            //int NumberOfEntries = 0;
-            //Console.WriteLine("How many Candidates You want to enter");
-            //NumberOfEntries = int.Parse(Console.ReadLine());
+            IStudentCap studentService = new StudentCapRepo();
 
-            //IStudentCap studentService = new StudentCapRepo();
+            var studentList = studentService.TakingUserInputs();
 
-            //List<StudentCap> NewStudentList = new List<StudentCap>();
+            studentService.AddStudent(studentList);
 
-            //for (int i = 0; i < NumberOfEntries; i++)
-            //{
-            //    StudentCap newStudent = new StudentCap();
+            studentService.DisplayStudent();
 
-            //    Console.WriteLine("Please Enter First Name");
-            //    newStudent.FirstName = (Console.ReadLine());
+            Console.WriteLine("Which students you want to delete, Plz enter the Roll No?");
+            int rollNo = int.Parse(Console.ReadLine());
+            
+            studentService.DeleteStudent(rollNo);
 
-            //    Console.WriteLine("Please Enter Last Name");
-            //    newStudent.LastName = (Console.ReadLine());
-
-            //    Console.WriteLine("Please Enter Roll No.");
-            //    newStudent.RollNo = int.Parse(Console.ReadLine());
-
-            //    NewStudentList.Add(newStudent);
-
-
-            //    //Console.WriteLine($"Total Entries are:{studentobj1.NumberOfEntries}");
-
-            //}
-
-            //studentService.AddStudent(NewStudentList);
-
-
-            //studentService.DisplayStudent();
+            Console.WriteLine("After deleted the students");
+            studentService.DisplayStudent();
 
             //string[] animal = { "Cow", "Goat", "Horse" };
 
@@ -147,7 +130,7 @@ namespace OOP
 
             //}
 
-           
+
             List<int> TableList = new List<int>(4);
 
             int x, y;
@@ -183,7 +166,7 @@ namespace OOP
 
             Console.WriteLine($"Result is: {F}{S}");
 
-            string[] {"Yasir", "Hameed","Khan" };
+         
 
 
 

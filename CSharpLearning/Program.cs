@@ -22,7 +22,7 @@ namespace CSharpLearning
             //    // HelloWorld();
             //    // HelloWorldfor();
             //    // HelloWorldDoWhile();
-             Table();
+           FunctionsLearning.ArrayTask();
             //    // Factorial();
             //    // FactorialSelf();
             //    // series();
@@ -35,26 +35,26 @@ namespace CSharpLearning
            
             // Employee List Declaration 
 
-            List<Employee> employeeList = new List<Employee>();
+           // List<Employee> employeeList = new List<Employee>();
 
-            Console.WriteLine("How many employees you want to entered?");
-            int numberOfUsers = int.Parse(Console.ReadLine());
+           // Console.WriteLine("How many employees you want to entered?");
+           // int numberOfUsers = int.Parse(Console.ReadLine());
 
-            employeeList = GetEmployeeList(numberOfUsers);
+           // employeeList = GetEmployeeList(numberOfUsers);
 
-           // Diplay Employee from EmployeeDb List
+           //// Diplay Employee from EmployeeDb List
 
-            DisplayEmployee(employeeList);
+           // DisplayEmployee(employeeList);
 
-            Console.WriteLine("Which Employee want to delete, Please entered the Id");
+           // Console.WriteLine("Which Employee want to delete, Please entered the Id");
 
-            var empID = int.Parse(Console.ReadLine());
+           // var empID = int.Parse(Console.ReadLine());
 
-            DeleteEmployee(empID, employeeList);
+           // DeleteEmployee(empID, employeeList);
 
-            // Display Employee from EmployeeDb List
+           // // Display Employee from EmployeeDb List
 
-            DisplayEmployee(employeeList);
+           // DisplayEmployee(employeeList);
 
         }
 

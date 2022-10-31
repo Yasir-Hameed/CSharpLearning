@@ -4,70 +4,70 @@ using System.Text;
 
 namespace CSharpLearning
 {
-   public  class FunctionsLearning
+    public class FunctionsLearning
     {
-       //static void Main()
-       // {
-       //     FunctionsLearning Object = new FunctionsLearning();
+        //static void Main()
+        // {
+        //     FunctionsLearning Object = new FunctionsLearning();
 
-       //     #region Functions of int Types Definition
+        //     #region Functions of int Types Definition
 
-       //     //Object.NoReturnNoInput();
+        //     //Object.NoReturnNoInput();
 
-       //     //int sumResult = Object.ReturnWithNoInput();
-       //     //Console.WriteLine($"Sum of a and B is: {sumResult}");
-
-
-       //     //int sumRes = Object.ReturnWithInput(10, 15);
-       //     //Console.WriteLine($"Sum of a and B is: {sumRes}");
-
-       //     //Object.NoReturnWithInput(10, 20);
+        //     //int sumResult = Object.ReturnWithNoInput();
+        //     //Console.WriteLine($"Sum of a and B is: {sumResult}");
 
 
+        //     //int sumRes = Object.ReturnWithInput(10, 15);
+        //     //Console.WriteLine($"Sum of a and B is: {sumRes}");
+
+        //     //Object.NoReturnWithInput(10, 20);
 
 
-       //     #endregion
 
 
-       //     //#region Functions of String Types
+        //     #endregion
 
-       //     //string Firstname, Lastname, Fullname;
-       //     //Console.WriteLine("Please Enter First Name");
-       //     //Firstname = (Console.ReadLine());
-       //     //Console.WriteLine("Please Enter Last Name");
-       //     //Lastname = (Console.ReadLine());
 
-       //     //Fullname = Object.StringInputwithReturn(Firstname, Lastname);
-       //     //Console.WriteLine($"Fullname: {Fullname}");
+        //     //#region Functions of String Types
 
-       //     //string firstName, lastName;
-       //     //Console.WriteLine("Please Enter First Name");
-       //     //firstName = (Console.ReadLine());
-       //     //Console.WriteLine("Please Enter Last Name");
-       //     //lastName = (Console.ReadLine());
+        //     //string Firstname, Lastname, Fullname;
+        //     //Console.WriteLine("Please Enter First Name");
+        //     //Firstname = (Console.ReadLine());
+        //     //Console.WriteLine("Please Enter Last Name");
+        //     //Lastname = (Console.ReadLine());
 
-       //     //Object.StringInputWithNoReturn(firstName, lastName);
+        //     //Fullname = Object.StringInputwithReturn(Firstname, Lastname);
+        //     //Console.WriteLine($"Fullname: {Fullname}");
 
-       //     //Fullname = Object.StringNoInputWithReturn();
-       //     //Console.WriteLine($"Fullname: {Fullname}");
+        //     //string firstName, lastName;
+        //     //Console.WriteLine("Please Enter First Name");
+        //     //firstName = (Console.ReadLine());
+        //     //Console.WriteLine("Please Enter Last Name");
+        //     //lastName = (Console.ReadLine());
 
-       //     //Object.StringNoInputNoReturn();
+        //     //Object.StringInputWithNoReturn(firstName, lastName);
 
-       //     //Object.StringNoInputWithReturn();
+        //     //Fullname = Object.StringNoInputWithReturn();
+        //     //Console.WriteLine($"Fullname: {Fullname}");
 
-       //     int[] array = arrayValues();
+        //     //Object.StringNoInputNoReturn();
 
-       //     int maxValue = Object.ReturnMaxValue(array);
+        //     //Object.StringNoInputWithReturn();
 
-       //     string evenOrOdd = Object.maxNumOddorEven(maxValue);
+        //     int[] array = arrayValues();
 
-       //     //Console.WriteLine(evenOrOdd);
+        //     int maxValue = Object.ReturnMaxValue(array);
 
-       //     CombinedProgram();
+        //     string evenOrOdd = Object.maxNumOddorEven(maxValue);
 
-       //     //#endregion
+        //     //Console.WriteLine(evenOrOdd);
 
-       // }
+        //     CombinedProgram();
+
+        //     //#endregion
+
+        // }
 
         //--------------------------Functions------------------------
 
@@ -143,12 +143,12 @@ namespace CSharpLearning
             foreach (var item in array)
             {
                 Console.WriteLine($"Item is: {item}");
-                if (max<array[count])
+                if (max < array[count])
                 {
                     max = array[count];
                     count++;
                 }
-                
+
             }
             return max;
         }
@@ -171,12 +171,12 @@ namespace CSharpLearning
             return evenOrOdd;
         }
 
-         /// <summary>
-    ///  We will use void whcich will Return value with Input in parameter ()
-    /// </summary>
-    /// <param name="firstValue"></param>
-    /// <param name="secondValue"></param>
-         public void NoReturnWithInput(int firstValue, int secondValue)
+        /// <summary>
+        ///  We will use void whcich will Return value with Input in parameter ()
+        /// </summary>
+        /// <param name="firstValue"></param>
+        /// <param name="secondValue"></param>
+        public void NoReturnWithInput(int firstValue, int secondValue)
         {
             int sum = firstValue + secondValue;
             Console.WriteLine($"Total Sum is: {sum}");
@@ -206,9 +206,9 @@ namespace CSharpLearning
             Firstname = (Console.ReadLine());
             Console.WriteLine("Please Enter Last Name");
             Lastname = (Console.ReadLine());
-            Console.WriteLine("Full Name" +Firstname+Lastname);
+            Console.WriteLine("Full Name" + Firstname + Lastname);
         }
-        public string StringInputwithReturn(string Firstname,string Lastname)
+        public string StringInputwithReturn(string Firstname, string Lastname)
         {
             string FullName;
             FullName = string.Concat(Firstname, Lastname);
@@ -226,14 +226,48 @@ namespace CSharpLearning
 
         public void StringInputWithNoReturn(string firstName, string lastName)
         {
-           Console.WriteLine($"Full Name is:  ,{ firstName},{ lastName}");
+            Console.WriteLine($"Full Name is:  ,{ firstName},{ lastName}");
         }
+
+        public static void ArrayTask()
+        {
+            int flag = 0;
+            string[] array = { "Yasir", "Hameed", "Khan" };
+            int pos = 1;
+            string val = "Asif";
+
+            string[] newArray = new string[array.Length + 1];
+
+            for (int i = 0; i < newArray.Length; i++)
+            {
+                if(flag ==0)
+                {
+                    if (i == pos)
+                    {
+                        flag = 1;
+                        newArray[i] = val;
+                        i--;
+                    }
+                }
+                else
+                {
+                    newArray[i] = array[i];
+                }
+            }
+
+            foreach (var item in newArray)
+            {
+                Console.Write(item);
+            }
+        }
+
+
 
         #endregion
 
         #region Methods of String
 
-        
+
 
         #endregion
 
