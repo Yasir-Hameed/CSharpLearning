@@ -44,7 +44,7 @@ namespace OOP.InCapsulation
 
         public void DeleteStudent(int Id)
         {
-            StudentCap student = StudentDb.Where(x => x.RollNo == Id).FirstOrDefault();
+            StudentCap student = StudentDb.FirstOrDefault(x => x.RollNo == Id);
             StudentDb.Remove(student);
         }
 
