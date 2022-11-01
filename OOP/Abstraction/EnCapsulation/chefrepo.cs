@@ -34,22 +34,35 @@ namespace OOP.Abstraction.EnCapsulation
             }
             return NewChefList;
 
-         
+
 
         }
 
-        public void AddNewChef(List<Chef> NewChefList)
+        public List<Chef> AddNewChef(List<Chef> NewChefList)
         {
             ChefList.AddRange(NewChefList);
+            return ChefList;
         }
+
+        
+
 
         public void Deletechef(int Id)
         {
-                Chef delchef = ChefList.FirstOrDefault(x => x.code == Id);
-                ChefList.Remove(delchef);
-
-               
+            Chef delchef = ChefList.FirstOrDefault(x => x.code == Id);
+            ChefList.Remove(delchef);
         }
 
+        public void Display()
+
+	{
+            foreach (var item in ChefList)
+            {
+                Console.WriteLine($"Chef Name:{item.Name}");
+                Console.WriteLine($"Chef Age:{item.Age}");
+                Console.WriteLine($"Chef Code:{item.code}");
+
+            }
+	}
     }
 }
