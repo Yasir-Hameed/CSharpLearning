@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP.Abstraction.EnCapsulation
 {
-    interface Ichef
+    interface IChefService
     {
         List<Chef> AddNewChef(List<Chef> NewChefList);
 
@@ -12,6 +12,6 @@ namespace OOP.Abstraction.EnCapsulation
 
         List<Chef> UserInput();
 
-        public void Display()
+        public void Display();
     }
 }

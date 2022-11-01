@@ -4,6 +4,7 @@ using OOP.Inheritance;
 using OOP.ObjInitialize;
 using System;
 using System.Collections.Generic;
+using OOP.Abstraction.EnCapsulation;
 
 namespace OOP
 {
@@ -92,6 +93,13 @@ namespace OOP
             //employee.EmployeeId1 = 1;
 
             //Console.WriteLine(employee.EmployeeId1); 
+
+           IChefService chefRepo = new ChefRepo();
+            var result = chefRepo.UserInput();
+
+            chefRepo.AddNewChef(result);
+
+            chefRepo.Display();
 
 
             IStudentCap studentService = new StudentCapRepo();

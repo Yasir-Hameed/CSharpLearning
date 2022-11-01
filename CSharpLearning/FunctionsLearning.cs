@@ -192,6 +192,8 @@ namespace CSharpLearning
             string evenOrOdd = functionsLearning.maxNumOddorEven(maxValue);
 
             Console.WriteLine(evenOrOdd);
+
+           
         }
 
         #endregion
@@ -221,10 +223,11 @@ namespace CSharpLearning
             string lastName = "Hameed";
             string fullName = firstName + " " + lastName;
             return fullName;
+            StringInputWithNoReturn("gull", "yasir");
 
         }
 
-        public void StringInputWithNoReturn(string firstName, string lastName)
+        public static void StringInputWithNoReturn(string firstName, string lastName)
         {
             Console.WriteLine($"Full Name is:  ,{ firstName},{ lastName}");
         }

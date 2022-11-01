@@ -4,19 +4,19 @@ using System.Linq;
 
 namespace OOP.Abstraction.EnCapsulation
 {
-    class chefrepo : Ichef
+    class ChefRepo : IChefService
     {
-        List<Chef> ChefList = new List<Chef>();
+        List<Chef> MasterList = new List<Chef>();
 
         public List<Chef> UserInput()
         {
-            int UserInput = 0;
+            int abc = 0;
             Console.WriteLine("Enter Number of Chefs");
-            UserInput = int.Parse(Console.ReadLine());
+            abc = int.Parse(Console.ReadLine());
 
-            List<Chef> NewChefList = new List<Chef>();
-
-            for (int i = 0; i < UserInput; i++)
+            List<Chef> ChildList = new List<Chef>();
+            //Chef Objchef = new Chef();
+            for (int i = 0; i <= abc; i+=2)
             {
                 Chef Objchef = new Chef();
 
@@ -29,19 +29,19 @@ namespace OOP.Abstraction.EnCapsulation
                 Console.WriteLine("Enter Code");
                 Objchef.code = int.Parse(Console.ReadLine());
 
-                NewChefList.Add(Objchef);
+                ChildList.Add(Objchef);
 
             }
-            return NewChefList;
+            return ChildList;
 
 
 
         }
 
-        public List<Chef> AddNewChef(List<Chef> NewChefList)
+        public List<Chef> AddNewChef(List<Chef> abc)
         {
-            ChefList.AddRange(NewChefList);
-            return ChefList;
+            MasterList.AddRange(abc);
+            return MasterList;
         }
 
         
@@ -49,14 +49,14 @@ namespace OOP.Abstraction.EnCapsulation
 
         public void Deletechef(int Id)
         {
-            Chef delchef = ChefList.FirstOrDefault(x => x.code == Id);
-            ChefList.Remove(delchef);
+            Chef delchef = MasterList.FirstOrDefault(x => x.code == Id);
+            MasterList.Remove(delchef);
         }
 
         public void Display()
 
 	{
-            foreach (var item in ChefList)
+            foreach (var item in MasterList)
             {
                 Console.WriteLine($"Chef Name:{item.Name}");
                 Console.WriteLine($"Chef Age:{item.Age}");
