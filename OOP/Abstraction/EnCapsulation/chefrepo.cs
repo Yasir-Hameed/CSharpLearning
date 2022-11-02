@@ -10,13 +10,82 @@ namespace OOP.Abstraction.EnCapsulation
 
         public List<Chef> UserInput()
         {
-            int abc = 0;
+            int UserInput = 0;
             Console.WriteLine("Enter Number of Chefs");
-            abc = int.Parse(Console.ReadLine());
+            UserInput = int.Parse(Console.ReadLine());
 
             List<Chef> ChildList = new List<Chef>();
-            //Chef Objchef = new Chef();
-            for (int i = 0; i <= abc; i+=2)
+ 
+            for (int i = 0; i <= UserInput; i+=2)
+            {
+                Chef Objchef = new Chef();
+
+                Console.WriteLine("Enter First Name");
+                Objchef.Name = (Console.ReadLine());
+             
+                Console.WriteLine("Enter Age");
+                int.TryParse(Console.ReadLine(), out int val);
+                Objchef.Age = val;
+
+                Console.WriteLine("Enter Code");
+                Objchef.code = int.Parse(Console.ReadLine());
+
+                
+                ChildList.Add(Objchef);
+
+            }
+            return ChildList;
+
+
+
+        }
+
+        public List<Chef> AddNewChef(List<Chef> childList)
+        {
+            MasterList.AddRange(childList);
+            return MasterList;
+        }
+
+        public void Deletechef(int Id)
+        {
+            Chef delchef = MasterList.FirstOrDefault(x => x.code == Id);
+            MasterList.Remove(delchef);
+        }
+
+        public (int index, Chef Obj) IndexPositionandObject()
+        {
+            Chef Objchef = new Chef();
+
+            Console.WriteLine("Enter First Name");
+            Objchef.Name = (Console.ReadLine());
+
+            Console.WriteLine("Enter Age");
+            Objchef.Age = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Code");
+            Objchef.code = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Plz enter index number.");
+            int index = int.Parse(Console.ReadLine());
+
+            return (index, Objchef);
+        }
+
+        public void InsertChef(int index, Chef chef)
+        {
+            MasterList.Insert(index, chef);
+        }
+
+        public  (int index, List<Chef> objs) AddNewListofIndex()
+        {
+            int index = 0;
+            Console.WriteLine("Enter Index");
+            int.TryParse(Console.ReadLine(), out var G);
+            index = G;
+
+            List<Chef> SecList = new List<Chef>();
+
+            for (int i = 0; i < index ; i++)
             {
                 Chef Objchef = new Chef();
 
@@ -29,30 +98,19 @@ namespace OOP.Abstraction.EnCapsulation
                 Console.WriteLine("Enter Code");
                 Objchef.code = int.Parse(Console.ReadLine());
 
-                ChildList.Add(Objchef);
-
+                
+                SecList.Add(Objchef);
             }
-            return ChildList;
 
-
+            return (index,SecList);
 
         }
 
-        public List<Chef> AddNewChef(List<Chef> abc)
+        public void InsertChefList(int index,List<Chef> chef)
         {
-            MasterList.AddRange(abc);
-            return MasterList;
+          //  MasterList.InsertRangeAt(index, SecList);
+            MasterList.AddRange(chef);
         }
-
-        
-
-
-        public void Deletechef(int Id)
-        {
-            Chef delchef = MasterList.FirstOrDefault(x => x.code == Id);
-            MasterList.Remove(delchef);
-        }
-
         public void Display()
 
 	{

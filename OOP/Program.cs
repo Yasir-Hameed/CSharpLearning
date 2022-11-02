@@ -99,6 +99,11 @@ namespace OOP
 
             chefRepo.AddNewChef(result);
 
+            (int i, Chef chef) = chefRepo.IndexPositionandObject();
+
+            chefRepo.InsertChef(i, chef);
+            chefRepo.AddNewListofIndex();
+
             chefRepo.Display();
 
 
