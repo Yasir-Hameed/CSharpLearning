@@ -8,6 +8,7 @@ namespace OOP.Abstraction.EnCapsulation
     {
         List<Chef> MasterList = new List<Chef>();
 
+       
         public List<Chef> UserInput()
         {
             int UserInput = 0;
@@ -15,20 +16,22 @@ namespace OOP.Abstraction.EnCapsulation
             UserInput = int.Parse(Console.ReadLine());
 
             List<Chef> ChildList = new List<Chef>();
- 
-            for (int i = 0; i <= UserInput; i+=2)
+
+            for (int i = 0; i <= UserInput; i += 2)
             {
                 Chef Objchef = new Chef();
 
                 Console.WriteLine("Enter First Name");
                 Objchef.Name = (Console.ReadLine());
-             
+
                 Console.WriteLine("Enter Age");
                 int.TryParse(Console.ReadLine(), out int val);
                 Objchef.Age = val;
 
                 Console.WriteLine("Enter Code");
                 Objchef.code = int.Parse(Console.ReadLine());
+
+
 
                 
                 ChildList.Add(Objchef);
@@ -48,11 +51,12 @@ namespace OOP.Abstraction.EnCapsulation
 
         public void Deletechef(int Id)
         {
+
             Chef delchef = MasterList.FirstOrDefault(x => x.code == Id);
             MasterList.Remove(delchef);
         }
 
-        public (int index, Chef Obj) IndexPositionandObject()
+        public (int index, Chef Obj) GetIndexPositionandObject()
         {
             Chef Objchef = new Chef();
 
@@ -76,7 +80,7 @@ namespace OOP.Abstraction.EnCapsulation
             MasterList.Insert(index, chef);
         }
 
-        public  (int index, List<Chef> objs) AddNewListofIndex()
+        public (int index, List<Chef> objs) AddNewListofIndex()
         {
             int index = 0;
             Console.WriteLine("Enter Index");
@@ -85,7 +89,7 @@ namespace OOP.Abstraction.EnCapsulation
 
             List<Chef> SecList = new List<Chef>();
 
-            for (int i = 0; i < index ; i++)
+            for (int i = 0; i < index; i++)
             {
                 Chef Objchef = new Chef();
 
@@ -98,22 +102,31 @@ namespace OOP.Abstraction.EnCapsulation
                 Console.WriteLine("Enter Code");
                 Objchef.code = int.Parse(Console.ReadLine());
 
-                
+
                 SecList.Add(Objchef);
             }
 
-            return (index,SecList);
+            return (index, SecList);
 
         }
 
-        public void InsertChefList(int index,List<Chef> chef)
+        public void InsertChefList(int index, List<Chef> chef)
         {
-          //  MasterList.InsertRangeAt(index, SecList);
+            //  MasterList.InsertRangeAt(index, SecList);
             MasterList.AddRange(chef);
         }
+        public bool Contains()
+        {
+            Chef Objchef2 = new Chef();
+            MasterList.Add(Objchef2);
+
+
+            return false;
+        }
+
         public void Display()
 
-	{
+        {
             foreach (var item in MasterList)
             {
                 Console.WriteLine($"Chef Name:{item.Name}");
@@ -121,6 +134,10 @@ namespace OOP.Abstraction.EnCapsulation
                 Console.WriteLine($"Chef Code:{item.code}");
 
             }
-	}
+        }
+
     }
-}
+
+        }
+
+       

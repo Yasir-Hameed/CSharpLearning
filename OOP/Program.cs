@@ -99,10 +99,11 @@ namespace OOP
 
             chefRepo.AddNewChef(result);
 
-            (int i, Chef chef) = chefRepo.IndexPositionandObject();
+            (int i, Chef chef) = chefRepo.GetIndexPositionandObject();
 
             chefRepo.InsertChef(i, chef);
             chefRepo.AddNewListofIndex();
+            chefRepo.Contains();
 
             chefRepo.Display();
 
@@ -147,8 +148,8 @@ namespace OOP
             List<int> TableList = new List<int>(4);
 
             int x, y;
-            
-            for (int i = 0; i < 4 ; i++)
+
+            for (int a = 0; a < 4; a++)
             {
                 Console.WriteLine("Please Enter First Value");
                 x = int.Parse(Console.ReadLine());

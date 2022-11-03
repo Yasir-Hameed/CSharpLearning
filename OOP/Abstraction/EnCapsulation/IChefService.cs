@@ -14,12 +14,14 @@ namespace OOP.Abstraction.EnCapsulation
 
         void  InsertChef(int index, Chef chef);
 
-        (int index, Chef Obj) IndexPositionandObject();
+        (int index, Chef Obj) GetIndexPositionandObject();
 
         public (int index, List<Chef> objs) AddNewListofIndex();
 
+        public bool Contains();
 
 
-       void Display();
+
+        void Display();
     }
 }
