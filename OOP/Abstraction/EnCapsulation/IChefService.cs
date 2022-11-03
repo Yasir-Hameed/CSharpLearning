@@ -18,7 +18,7 @@ namespace OOP.Abstraction.EnCapsulation
 
         public (int index, List<Chef> objs) AddNewListofIndex();
 
-        public bool Contains();
+        
 
 
 

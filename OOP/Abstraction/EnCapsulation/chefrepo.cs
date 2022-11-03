@@ -8,9 +8,23 @@ namespace OOP.Abstraction.EnCapsulation
     {
         List<Chef> MasterList = new List<Chef>();
 
-       
+        public Chef UserInputforSingleObject(Chef chef)
+        {
+           
+          return (chef);
+        }
+       public bool isCheck()
+        {
+           bool checkage= MasterList.Exists(x => x.Age == 10);
+            if (checkage)
+            {
+                Console.WriteLine("YOUR AGE IS 10");
+            }
+            return false;
+        }
         public List<Chef> UserInput()
         {
+            
             int UserInput = 0;
             Console.WriteLine("Enter Number of Chefs");
             UserInput = int.Parse(Console.ReadLine());

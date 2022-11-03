@@ -10,4 +10,3 @@ I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.cs
 I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.dll
 I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.pdb
 I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.genruntimeconfig.cache
-I:\Yasir\CSharpLearning\CSharpLearning\obj\Debug\netcoreapp3.1\CSharpLearning.csprojAssemblyReference.cache

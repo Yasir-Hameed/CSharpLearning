@@ -93,7 +93,10 @@ namespace OOP
             //employee.EmployeeId1 = 1;
 
             //Console.WriteLine(employee.EmployeeId1); 
+            ChefRepo Objchef3 = new ChefRepo();
+            Objchef3.isCheck();
 
+            
            IChefService chefRepo = new ChefRepo();
             var result = chefRepo.UserInput();
 
@@ -101,29 +104,17 @@ namespace OOP
 
             (int i, Chef chef) = chefRepo.GetIndexPositionandObject();
 
-            chefRepo.InsertChef(i, chef);
-            chefRepo.AddNewListofIndex();
-            chefRepo.Contains();
+            //chefRepo.InsertChef(i, chef);
+           // chefRepo.AddNewListofIndex();
+            //chefRepo.Contains()
 
-            chefRepo.Display();
+               
+            //chefRepo.Display();
 
 
-            IStudentCap studentService = new StudentCapRepo();
+           // IStudentCap studentService = new StudentCapRepo();
 
-            var studentList = studentService.TakingUserInputs();
-
-            studentService.AddStudent(studentList);
-
-            studentService.DisplayStudent();
-
-            Console.WriteLine("Which students you want to delete, Plz enter the Roll No?");
-            int rollNo = int.Parse(Console.ReadLine());
-            
-            studentService.DeleteStudent(rollNo);
-
-            Console.WriteLine("After deleted the students");
-            studentService.DisplayStudent();
-
+          //
             //string[] animal = { "Cow", "Goat", "Horse" };
 
             //List<string> animalList = new List<string>();
