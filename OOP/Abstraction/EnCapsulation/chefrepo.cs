@@ -10,12 +10,12 @@ namespace OOP.Abstraction.EnCapsulation
 
         public Chef UserInputforSingleObject(Chef chef)
         {
-           
-          return (chef);
+
+            return (chef);
         }
-       public bool isCheck()
+        public bool isCheck()
         {
-           bool checkage= MasterList.Exists(x => x.Age == 10);
+            bool checkage = MasterList.Exists(x => x.Age == 10);
             if (checkage)
             {
                 Console.WriteLine("YOUR AGE IS 10");
@@ -24,7 +24,7 @@ namespace OOP.Abstraction.EnCapsulation
         }
         public List<Chef> UserInput()
         {
-            
+
             int UserInput = 0;
             Console.WriteLine("Enter Number of Chefs");
             UserInput = int.Parse(Console.ReadLine());
@@ -47,7 +47,7 @@ namespace OOP.Abstraction.EnCapsulation
 
 
 
-                
+
                 ChildList.Add(Objchef);
 
             }
@@ -150,8 +150,42 @@ namespace OOP.Abstraction.EnCapsulation
             }
         }
 
-    }
+        public Chef ObjectCreate()
+        {
+            Chef Obj3 = new Chef();
+            Console.WriteLine("Enter First Name");
+            Obj3.Name = (Console.ReadLine());
 
+            Console.WriteLine("Enter Age");
+            int.TryParse(Console.ReadLine(), out int val);
+            Obj3.Age = val;
+
+            Console.WriteLine("Enter Code");
+            Obj3.code = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Salary");
+            Obj3.salary = int.Parse(Console.ReadLine());
+
+
+            return Obj3;
         }
 
-       
+        public List<Chef> AddNewObject(Chef chef)
+        {
+            MasterList.Add(chef);
+
+            return MasterList;
+        }
+
+        public Chef GetBaseonID(int sal)
+        {
+            Chef chef = MasterList.FirstOrDefault(x => x.salary == sal);
+
+            return chef;
+        }
+
+    }
+
+}
+
+

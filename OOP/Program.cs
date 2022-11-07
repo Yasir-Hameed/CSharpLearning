@@ -93,22 +93,49 @@ namespace OOP
             //employee.EmployeeId1 = 1;
 
             //Console.WriteLine(employee.EmployeeId1); 
-            ChefRepo Objchef3 = new ChefRepo();
-            Objchef3.isCheck();
+
+            // Take input from user and create object
+
+           // ChefRepo Objchef3 = new ChefRepo();
+
+           // Objchef3.isCheck();
 
             
-           IChefService chefRepo = new ChefRepo();
-            var result = chefRepo.UserInput();
+           //IChefService chefRepo = new ChefRepo();
+           // var result = chefRepo.UserInput();
 
-            chefRepo.AddNewChef(result);
+           // chefRepo.AddNewChef(result);
 
-            (int i, Chef chef) = chefRepo.GetIndexPositionandObject();
+           // (int i, Chef chef) = chefRepo.GetIndexPositionandObject();
 
             //chefRepo.InsertChef(i, chef);
-           // chefRepo.AddNewListofIndex();
-            //chefRepo.Contains()
+            // chefRepo.AddNewListofIndex();
+            //chefRepo.Contains()\
+
+            // Fist of all create the object of our Repo Class, which have many functions in it.
+            ChefRepo chefRepoObj = new ChefRepo();
+
+            // Second, Then by object (chefRepoObj) we call the function to create object (ObjectCreate()), which is returing an object.
+            Chef newChef = chefRepoObj.ObjectCreate();
+
+            // Third, Then we add object into our Master list  by calling AddNewObject Function.
+            chefRepoObj.AddNewObject(newChef);
+
+           
+            
+            int Salary;
+            Console.WriteLine("Enter Salary");
+           
+            Salary = int.Parse(Console.ReadLine());
+            Chef K = chefRepoObj.GetBaseonID(Salary);
+            Console.WriteLine(K.Name);
+            Console.WriteLine(K.Age);
+            Console.WriteLine(K.code);
+            Console.WriteLine(K.salary);
+            
 
                
+
             //chefRepo.Display();
 
 

@@ -8,5 +8,7 @@ namespace OOP.Abstraction.EnCapsulation
         public int Age { get; set; }
 
         public int code { get; set; }
+
+        public int salary { get; set; }
     }
 }
