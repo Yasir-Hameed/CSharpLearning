@@ -10,193 +10,193 @@ namespace OOP
 {
     class Program
     {
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        //{
 
-            // By Using Method
+        //    // By Using Method
 
-            //Teachers teacherObj = new Teachers();
-            //teacherObj.GetStudentInfo();   
-
-
-
-            //Animal animal = new Animal();
-            //animal.AnimalEat();
-
-            // By using Referece Variables
-            //Dump dump = new Dump();
-            //dump.Eat = "Animal Eating";
-            //dump.Eat1 = "Animal Eating1";
-            //dump.Eat2 = "Animal Eating2";
-            //dump.Eat3 = "Animal Eating3";
-            //dump.Eat4 = "Animal Eating4";
-            //dump.Eat5 = "Animal Eating5";
-
-            //Dump dump2 = new Dump(dump);
-            //Console.WriteLine(dump2.Eat);
-            //Console.WriteLine(dump2.Eat1);
-            //Console.WriteLine(dump2.Eat2);
-            //Console.WriteLine(dump2.Eat3);
-            //Console.WriteLine(dump2.Eat4);
-            //Console.WriteLine(dump2.Eat5);
-            ////By using Constructors
-            //Dump dump1 = new Dump();
-            //Console.WriteLine(dump1.Eat);
+        //    //Teachers teacherObj = new Teachers();
+        //    //teacherObj.GetStudentInfo();   
 
 
+
+        //    //Animal animal = new Animal();
+        //    //animal.AnimalEat();
+
+        //    // By using Referece Variables
+        //    //Dump dump = new Dump();
+        //    //dump.Eat = "Animal Eating";
+        //    //dump.Eat1 = "Animal Eating1";
+        //    //dump.Eat2 = "Animal Eating2";
+        //    //dump.Eat3 = "Animal Eating3";
+        //    //dump.Eat4 = "Animal Eating4";
+        //    //dump.Eat5 = "Animal Eating5";
+
+        //    //Dump dump2 = new Dump(dump);
+        //    //Console.WriteLine(dump2.Eat);
+        //    //Console.WriteLine(dump2.Eat1);
+        //    //Console.WriteLine(dump2.Eat2);
+        //    //Console.WriteLine(dump2.Eat3);
+        //    //Console.WriteLine(dump2.Eat4);
+        //    //Console.WriteLine(dump2.Eat5);
+        //    ////By using Constructors
+        //    //Dump dump1 = new Dump();
+        //    //Console.WriteLine(dump1.Eat);
 
 
 
 
-            //Animal AnimalObj = new Animal("E", "R", "L");
-            //Console.WriteLine(AnimalObj.E);
-            //Console.WriteLine(AnimalObj.R);
-            //Console.WriteLine(AnimalObj.L);
 
-            //AnimalObj.AnimalEat();
-            //AnimalObj.AnimalRun();
-            //AnimalObj.AnimalLooking();
-            //IStudent student = new NewStu();
-            //student.StudentPass();
 
-            //IStaff StaffObJNew = new NewStu();
-            //StaffObJNew.StaffAttendance();
+        //    //Animal AnimalObj = new Animal("E", "R", "L");
+        //    //Console.WriteLine(AnimalObj.E);
+        //    //Console.WriteLine(AnimalObj.R);
+        //    //Console.WriteLine(AnimalObj.L);
 
-            //Cuboid objCub  = new Cuboid();
+        //    //AnimalObj.AnimalEat();
+        //    //AnimalObj.AnimalRun();
+        //    //AnimalObj.AnimalLooking();
+        //    //IStudent student = new NewStu();
+        //    //student.StudentPass();
 
-            //(int Length, int Width) = objCub.TakingInputsFromTheUser();
+        //    //IStaff StaffObJNew = new NewStu();
+        //    //StaffObJNew.StaffAttendance();
 
-            //Cuboid objcub = new Cuboid(Length, Width);
+        //    //Cuboid objCub  = new Cuboid();
 
-            //Console.WriteLine(objcub.Area());
+        //    //(int Length, int Width) = objCub.TakingInputsFromTheUser();
 
-            //Console.WriteLine(objcub.parameter());
+        //    //Cuboid objcub = new Cuboid(Length, Width);
 
-            //OverrideingP ObjOver = new OverrideingP();
+        //    //Console.WriteLine(objcub.Area());
 
-            //OverLoading ObjLoad = new OverLoading(1,2);
-            //OverLoading ObjLoadOther = new OverLoading();
-            //ObjLoad.Add();
-            //ObjLoadOther.Add(1, 1.0f, 2.0f);
-            //ObjLoadOther.Add(1,2f,2.4f);
-            //ObjLoadOther.Add(1.0,2.0,2.4f);
+        //    //Console.WriteLine(objcub.parameter());
 
-            //IStore StoreObj = new Store();
-            //StoreObj.StoreClosed();
+        //    //OverrideingP ObjOver = new OverrideingP();
 
-            //IStore StoreObj1 = new Store();
-            //StoreObj1.StoreOpen();
+        //    //OverLoading ObjLoad = new OverLoading(1,2);
+        //    //OverLoading ObjLoadOther = new OverLoading();
+        //    //ObjLoad.Add();
+        //    //ObjLoadOther.Add(1, 1.0f, 2.0f);
+        //    //ObjLoadOther.Add(1,2f,2.4f);
+        //    //ObjLoadOther.Add(1.0,2.0,2.4f);
 
-            //Employee employee = new Employee();
-            //employee.GetEmpId();
+        //    //IStore StoreObj = new Store();
+        //    //StoreObj.StoreClosed();
 
-            //employee.EmployeeId1 = 1;
+        //    //IStore StoreObj1 = new Store();
+        //    //StoreObj1.StoreOpen();
 
-            //Console.WriteLine(employee.EmployeeId1); 
+        //    //Employee employee = new Employee();
+        //    //employee.GetEmpId();
 
-            // Take input from user and create object
+        //    //employee.EmployeeId1 = 1;
 
-           // ChefRepo Objchef3 = new ChefRepo();
+        //    //Console.WriteLine(employee.EmployeeId1); 
 
-           // Objchef3.isCheck();
+        //    // Take input from user and create object
+
+        //   // ChefRepo Objchef3 = new ChefRepo();
+
+        //   // Objchef3.isCheck();
 
             
-           //IChefService chefRepo = new ChefRepo();
-           // var result = chefRepo.UserInput();
+        //   //IChefService chefRepo = new ChefRepo();
+        //   // var result = chefRepo.UserInput();
 
-           // chefRepo.AddNewChef(result);
+        //   // chefRepo.AddNewChef(result);
 
-           // (int i, Chef chef) = chefRepo.GetIndexPositionandObject();
+        //   // (int i, Chef chef) = chefRepo.GetIndexPositionandObject();
 
-            //chefRepo.InsertChef(i, chef);
-            // chefRepo.AddNewListofIndex();
-            //chefRepo.Contains()\
+        //    //chefRepo.InsertChef(i, chef);
+        //    // chefRepo.AddNewListofIndex();
+        //    //chefRepo.Contains()\
 
-            // Fist of all create the object of our Repo Class, which have many functions in it.
-            ChefRepo chefRepoObj = new ChefRepo();
+        //    // Fist of all create the object of our Repo Class, which have many functions in it.
+        //    ChefRepo chefRepoObj = new ChefRepo();
 
-            // Second, Then by object (chefRepoObj) we call the function to create object (ObjectCreate()), which is returing an object.
-            Chef newChef = chefRepoObj.ObjectCreate();
+        //    // Second, Then by object (chefRepoObj) we call the function to create object (ObjectCreate()), which is returing an object.
+        //    Chef newChef = chefRepoObj.ObjectCreate();
 
-            // Third, Then we add object into our Master list  by calling AddNewObject Function.
-            chefRepoObj.AddNewObject(newChef);
+        //    // Third, Then we add object into our Master list  by calling AddNewObject Function.
+        //    chefRepoObj.AddNewObject(newChef);
 
            
             
-            int Salary;
-            Console.WriteLine("Enter Salary");
+        //    int Salary;
+        //    Console.WriteLine("Enter Salary");
            
-            Salary = int.Parse(Console.ReadLine());
-            Chef K = chefRepoObj.GetBaseonID(Salary);
-            Console.WriteLine(K.Name);
-            Console.WriteLine(K.Age);
-            Console.WriteLine(K.code);
-            Console.WriteLine(K.salary);
+        //    Salary = int.Parse(Console.ReadLine());
+        //    Chef K = chefRepoObj.GetBaseonID(Salary);
+        //    Console.WriteLine(K.Name);
+        //    Console.WriteLine(K.Age);
+        //    Console.WriteLine(K.code);
+        //    Console.WriteLine(K.salary);
             
 
                
 
-            //chefRepo.Display();
+        //    //chefRepo.Display();
 
 
-           // IStudentCap studentService = new StudentCapRepo();
+        //   // IStudentCap studentService = new StudentCapRepo();
 
-          //
-            //string[] animal = { "Cow", "Goat", "Horse" };
+        //  //
+        //    //string[] animal = { "Cow", "Goat", "Horse" };
 
-            //List<string> animalList = new List<string>();
+        //    //List<string> animalList = new List<string>();
 
-            //for (int i = 0; i <= 5; i++)
-            //{
-            //    Console.WriteLine($"Please Enter {i} Name:");
+        //    //for (int i = 0; i <= 5; i++)
+        //    //{
+        //    //    Console.WriteLine($"Please Enter {i} Name:");
 
-            //    animalList.Add(Console.ReadLine());
+        //    //    animalList.Add(Console.ReadLine());
 
-            //}
+        //    //}
 
-            //animalList.AddRange(animal);
+        //    //animalList.AddRange(animal);
 
-            //foreach (string item in animalList)
-            //{
-            //    Console.WriteLine(item);
+        //    //foreach (string item in animalList)
+        //    //{
+        //    //    Console.WriteLine(item);
 
-            //}
+        //    //}
 
 
-            List<int> TableList = new List<int>(4);
+        //    List<int> TableList = new List<int>(4);
 
-            int x, y;
+        //    int x, y;
 
-            for (int a = 0; a < 4; a++)
-            {
-                Console.WriteLine("Please Enter First Value");
-                x = int.Parse(Console.ReadLine());
+        //    for (int a = 0; a < 4; a++)
+        //    {
+        //        Console.WriteLine("Please Enter First Value");
+        //        x = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Please Enter Second");
-                y = int.Parse(Console.ReadLine());
+        //        Console.WriteLine("Please Enter Second");
+        //        y = int.Parse(Console.ReadLine());
 
-               int Result1 = x * y;
+        //       int Result1 = x * y;
 
-                TableList.Add(Result1);
-            }
-            foreach (var item in TableList)
-            {
-                Console.WriteLine($"Result is: {item}");
-            }
+        //        TableList.Add(Result1);
+        //    }
+        //    foreach (var item in TableList)
+        //    {
+        //        Console.WriteLine($"Result is: {item}");
+        //    }
 
-            int F, S, T;
+        //    int F, S, T;
 
-            Console.WriteLine("Please Enter First Value");
-            F = int.Parse(Console.ReadLine());
+        //    Console.WriteLine("Please Enter First Value");
+        //    F = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please Enter Second Value");
-            S = int.Parse(Console.ReadLine());
+        //    Console.WriteLine("Please Enter Second Value");
+        //    S = int.Parse(Console.ReadLine());
 
-            T = F;
-            F = S;
-            S = T;
+        //    T = F;
+        //    F = S;
+        //    S = T;
 
-            Console.WriteLine($"Result is: {F}{S}");
+        //    Console.WriteLine($"Result is: {F}{S}");
 
          
 
@@ -207,6 +207,6 @@ namespace OOP
 
 
 
-        }
+        //}
     }
 }
