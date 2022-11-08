@@ -16,7 +16,6 @@ namespace OOP.Abstraction
         public List<ProductModel> MultipleObjectsAdd();
 
         void AddNewList(List<ProductModel> NewProductList);
-
-
+        void DisplayByName(string Name);
     }
 }

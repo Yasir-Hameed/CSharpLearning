@@ -38,6 +38,12 @@ namespace OOP.Abstraction.EnCapsulation
                 Console.WriteLine($"{item.Name}, {item.Id},{item.Price},{item.CreatedDate}");
             }
         }
+
+        public void DisplayByName(string Name)
+        {
+           ProductModel productDetail = MasterProducts.Find(x => x.Name == Name);
+           Console.WriteLine($"{productDetail.Name}, {productDetail.Id},{productDetail.Price},{productDetail.CreatedDate}");
+        }
         public List<ProductModel> MultipleObjectsAdd()
         {
             int NumberOfObjects = 0;
