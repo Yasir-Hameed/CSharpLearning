@@ -10,6 +10,7 @@ namespace OOP.Abstraction.EnCapsulation
         public Student ObjectStudent()
         {
             Student Stud = new Student();
+            Student student = new Student();
 
             Console.WriteLine("Enter Student Id");
             Stud.Id = int.Parse(Console.ReadLine());
@@ -20,10 +21,8 @@ namespace OOP.Abstraction.EnCapsulation
             Console.WriteLine("Enter Last Name");
             Stud.LName = Console.ReadLine();
 
-            Address address = AddressObject();
-
-            new Student(Stud, address);
-
+            Stud.Address = AddressObject();
+            
             return Stud;
 
         }
@@ -52,6 +51,14 @@ namespace OOP.Abstraction.EnCapsulation
             AddressObj.City = Console.ReadLine();
 
             return AddressObj;
+        }
+        public void Display()
+        {
+            foreach (var item in StudentDB)
+            {
+                Console.WriteLine($"{item.FName} , {item.LName},{item.Address.City};{item.Address.HouseNO};{item.Address.StreetNO}");
+                
+            }
         }
     }
 }

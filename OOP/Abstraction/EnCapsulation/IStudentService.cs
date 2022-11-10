@@ -9,5 +9,6 @@ namespace OOP.Abstraction.EnCapsulation
         public Student ObjectStudent();
         public void AddNewStudent(Student NewStudent);
         public Address AddressObject();
+        public void Display();
     }
 }

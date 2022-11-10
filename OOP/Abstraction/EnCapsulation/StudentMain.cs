@@ -13,6 +13,8 @@ namespace OOP.Abstraction.EnCapsulation
             Student Stud = StudentObj1.ObjectStudent();
 
             StudentObj1.AddNewStudent(Stud);
+
+            StudentObj1.Display();
         }        
     }
 }
