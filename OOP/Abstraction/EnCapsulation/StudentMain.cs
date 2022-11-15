@@ -10,9 +10,20 @@ namespace OOP.Abstraction.EnCapsulation
         {
             IStudentService StudentObj1 = new RepStudentService();
 
-            Student Stud = StudentObj1.ObjectStudent();
+            //Student Stud = StudentObj1.ObjectStudent();
 
-            StudentObj1.AddNewStudent(Stud);
+            //StudentObj1.AddNewStudent(Stud);
+
+            var NewList = StudentObj1.AddNewList();
+
+
+            StudentObj1.AddStudentList(NewList);
+          
+            
+            int Id;
+            Console.WriteLine("Enter Student Id to Delete");
+            Id = int.Parse(Console.ReadLine());
+            StudentObj1.DelStudent(Id);
 
             StudentObj1.Display();
         }        

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace OOP.Abstraction.EnCapsulation
 {
     class RepStudentService : IStudentService
     {
-        List<Student> StudentDB = new List<Student>();
+       public List<Student> StudentDB = new List<Student>();
         public Student ObjectStudent()
         {
             Student Stud = new Student();
@@ -22,14 +23,14 @@ namespace OOP.Abstraction.EnCapsulation
             Stud.LName = Console.ReadLine();
 
             Stud.Address = AddressObject();
-            
+
             return Stud;
 
         }
 
         public void AddNewStudent(Student NewStudent)
-        
-       {
+
+        {
             StudentDB.Add(NewStudent);
         }
 
@@ -52,6 +53,46 @@ namespace OOP.Abstraction.EnCapsulation
 
             return AddressObj;
         }
+
+        public List<Student> AddNewList()
+        {
+            int NoOfStudent;
+            Console.WriteLine("Please Enter Number of Entries");
+            NoOfStudent = int.Parse(Console.ReadLine());
+
+            List<Student> ChildList = new List<Student>();
+
+            for (int i = 0; i < NoOfStudent; i++)
+            {
+                Student Stud2 = new Student();
+
+                Console.WriteLine("Enter First Name");
+                Stud2.FName = (Console.ReadLine());
+                Console.WriteLine("Enter Last Name");
+                Stud2.LName = (Console.ReadLine());
+                Console.WriteLine("Enter Address");
+                Stud2.Address = AddressObject();
+
+                ChildList.Add(Stud2);
+            }
+            return ChildList;
+        }
+
+        public void  AddStudentList(List<Student> students)
+        {
+            StudentDB.AddRange(students);
+           
+        }
+
+
+
+        public void DelStudent(int Id)
+        {
+            Student DelStud = StudentDB.FirstOrDefault(x => x.Address.Id == Id);
+            StudentDB.Remove(DelStud);
+        }
+        
+        
         public void Display()
         {
             foreach (var item in StudentDB)
