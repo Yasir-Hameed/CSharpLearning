@@ -4,7 +4,8 @@ using System.Text;
 
 namespace OOP.Abstraction.EnCapsulation
 {
-    class CN
+    class MainCNIC
     {
+
     }
 }
