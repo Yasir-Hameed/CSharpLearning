@@ -13,6 +13,7 @@ namespace OOP.Abstraction.EnCapsulation
         {
             try
             {
+                if (!ValidOption()) return;
                 #region Student Implementation
 
                 //IStudentService StudentObj1 = new RepStudentService();
@@ -52,7 +53,6 @@ namespace OOP.Abstraction.EnCapsulation
                         Console.WriteLine($"Please Enter Valid CNIC! + {errorMessage}" );
                     }
                    
-                    flag = ValidOption();
                 }
                 while (flag);
 
@@ -74,24 +74,24 @@ namespace OOP.Abstraction.EnCapsulation
         
         public static bool ValidOption()
         {
-            bool flag;
-
-        ValidOption:
-            Console.WriteLine("Do You want to continue? If yes then Press Y, If No then Press N");
-            string skipOrCont = Console.ReadLine();
-            if (skipOrCont.Contains('y') || skipOrCont.Contains('Y'))
-                flag = true;
-            else if (skipOrCont.Contains('N') || skipOrCont.Contains('n'))
-                flag = false;
-            else
+            bool flag=false;
+            bool invalid = true;
+            do
             {
-                Console.WriteLine("Please Enter Valid Option!");
-                goto ValidOption;
-            }
+                Console.WriteLine("Do You want to continue? If yes then Press Y, If No then Press N");
+                string skipOrCont = Console.ReadLine();
+                if (skipOrCont.Contains('y') || skipOrCont.Contains('Y'))
+                { flag = true; invalid = false; }
+                else if (skipOrCont.Contains('N') || skipOrCont.Contains('n'))
+                { flag = false; invalid = false; }
+                else
+                {
+                    Console.WriteLine("Please Enter Valid Option!");
+                    invalid = true;
+                }
 
-
+            } while (invalid);
             return flag;
-
         }
 
         public static bool HifenValidation(string CardNo)
@@ -141,7 +141,7 @@ namespace OOP.Abstraction.EnCapsulation
        {
             bool flag = false;
 
-            var splitHifen = CardNo.Split('-');
+            string[] splitHifen = CardNo.Split('-');
 
             string newCardNo = string.Concat(splitHifen);
 
