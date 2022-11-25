@@ -13,7 +13,7 @@ namespace OOP.Abstraction.EnCapsulation
         {
             try
             {
-                if (!ValidOption()) return;
+               
                 #region Student Implementation
 
                 //IStudentService StudentObj1 = new RepStudentService();
@@ -44,7 +44,7 @@ namespace OOP.Abstraction.EnCapsulation
                     string CardNo = Console.ReadLine();
 
 
-                    if(LengthValidation(CardNo) && HifenValidation(CardNo) && CheckHifenIndex(CardNo) && AcceptIntNotString(CardNo))
+                    if(LengthValidation(CardNo) && HifenValidation(CardNo) && AcceptIntNotString(CardNo) && SpacesRemove(CardNo) && CheckHifenIndex(CardNo))
                     {
                         Console.WriteLine("Thanks for enter Valid CNIC!");
                     }
@@ -163,7 +163,20 @@ namespace OOP.Abstraction.EnCapsulation
             return flag;
         }
 
-
+       public static bool SpacesRemove(string CardNo)
+        {
+            bool flag = false;
+            if (CardNo.Contains(' '))
+            {
+                errorMessage = "No Space Allowed";
+                flag = false;
+            }
+            else
+            {
+                flag = true;
+            }
+            return flag;
+        }
 
 
     }
