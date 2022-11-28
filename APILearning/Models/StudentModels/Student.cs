@@ -7,5 +7,6 @@
         public string LName { get; set; }
         public string Mail { get; set; }
         public int Marks { get; set; }
+        
     }
 }

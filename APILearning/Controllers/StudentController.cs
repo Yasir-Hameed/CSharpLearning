@@ -15,12 +15,41 @@ namespace APILearning.Controllers
             _studentRepo = studentRepo;
         }
 
-        [HttpPost("AddStudent")]
+        [HttpPost("AddStudents")]
         public IActionResult AddStudent(Student student)
         {
             try
-            {
+            { 
                 _studentRepo.AddStudent(student);
+                return Ok();
+            }
+            catch
+            {
+               return BadRequest("Not Added!");
+            }
+            
+        }
+        
+        [HttpGet("GetStudents")]
+        public IActionResult GetStudents()
+        {
+            try
+            {  
+                return Ok(_studentRepo.GetStudents());
+            }
+            catch
+            {
+               return BadRequest("Not Added!");
+            }
+            
+        }  
+
+        [HttpPut("UpdateStudent")]
+        public IActionResult UpdateStudent(Student student)
+        {
+            try
+            {
+                _studentRepo.UpdateStudent(student);
                 return Ok();
             }
             catch

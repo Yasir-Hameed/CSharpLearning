@@ -6,6 +6,10 @@ namespace APILearning.StudentService
     public interface IStudentRepo
     {
         void AddStudent(Student student);
-        List<Student> Display();
+
+        public List<Student> GetStudents();
+        public void UpdateStudent(Student student);
+
+
     }
 }
