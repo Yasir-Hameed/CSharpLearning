@@ -47,5 +47,11 @@ namespace APILearning.Controllers
             teacherRepo.DelTeacher(Salary);
             return Ok(teacherRepo.GetTeacher());
         }
+        [HttpGet("Id")]
+
+        public string GetEmployeebyId(int id)
+        {
+            return $"EmployeeDetails{id}";
+        }
     }
 }
