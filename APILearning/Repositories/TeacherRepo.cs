@@ -8,7 +8,7 @@ namespace APILearning.StudentRepos
 {
     public class TeacherRepo : ITeacherRepo
     {
-        List<Teacher> TeachersList = new List<Teacher>();
+         public static List<Teacher> TeachersList = new List<Teacher>();
 
         public void AddTeacher(Teacher teacher)
         {
@@ -39,6 +39,8 @@ namespace APILearning.StudentRepos
 
             TeachersList.Remove(del);
         }
+
+       
     }
  }
 
