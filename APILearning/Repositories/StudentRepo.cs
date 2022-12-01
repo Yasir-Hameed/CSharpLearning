@@ -8,7 +8,7 @@ namespace APILearning.StudentService
 {
     public class StudentRepo : IStudentRepo
     {
-        List<Student> StudentsListDb = new List<Student>();
+        public static List<Student> StudentsListDb = new List<Student>();
 
         public void AddStudent(Student student)
         {
@@ -27,10 +27,10 @@ namespace APILearning.StudentService
         public List<Student> GetStudents()
         {
 
-            var Teacher1 = TeacherRepo.TeachersList;
-            foreach (var item in StudentsListDb)
+            var teacherList = TeacherRepo.TeachersList;
+            foreach (var student in StudentsListDb)
             {
-                item.teacher = Teacher1.FirstOrDefault(x => x.Id == item.teacherId);
+                student.teacher = teacherList.FirstOrDefault(x => x.Id == student.teacherId);
             }
             return StudentsListDb;
         }

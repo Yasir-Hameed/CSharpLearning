@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using APILearning.Models;
 using APILearning.StudentRepos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace APILearning.Controllers
 {
@@ -16,7 +18,7 @@ namespace APILearning.Controllers
         private ITeacherRepo teacherRepo;
         public TeacherController(ITeacherRepo _teacherRepo)
         {
-            teacherRepo = _teacherRepo;
+            teacherRepo =  _teacherRepo;
         }
 
        [HttpPost("InsertTeacher")] 
@@ -35,9 +37,17 @@ namespace APILearning.Controllers
 
         [HttpGet("GetTeacher")]
 
-        public IActionResult GetTeacher()
+        public string GetTeacher()
         {
-            return Ok(teacherRepo.GetTeacher());
+            var result =   teacherRepo.GetTeacher();
+            
+            var json = JsonConvert.SerializeObject(result, Formatting.Indented,
+                    new JsonSerializerSettings()
+                    {
+                        ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                    });
+            
+            return json;
 
         }
 

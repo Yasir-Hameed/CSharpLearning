@@ -1,14 +1,21 @@
 ﻿using APILearning.Models;
+using APILearning.StudentService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace APILearning.StudentRepos
 {
     public class TeacherRepo : ITeacherRepo
     {
-         public static List<Teacher> TeachersList = new List<Teacher>();
+        public static List<Teacher> TeachersList = new List<Teacher>();
+
+
+        private IStudentRepo _studentRepo;
+        public TeacherRepo(IStudentRepo studentRepo)
+        {
+            _studentRepo = studentRepo;
+        }
 
         public void AddTeacher(Teacher teacher)
         {
@@ -21,6 +28,13 @@ namespace APILearning.StudentRepos
 
         public List<Teacher> GetTeacher()
         {
+            var getStudents = _studentRepo.GetStudents();
+
+            foreach (var teacher in TeachersList)
+            {
+                teacher.students = getStudents.Where(x => x.teacherId == teacher.Id).ToList();
+            }
+
             return TeachersList;
         }
 
@@ -40,7 +54,7 @@ namespace APILearning.StudentRepos
             TeachersList.Remove(del);
         }
 
-       
+
     }
- }
+}
 
