@@ -58,6 +58,19 @@ namespace APILearning.Controllers
             }
             
         }
+        [HttpGet("Getcourse")]
+        public IActionResult GetStudentCourse()
+        {
+            try
+            {
+                return Ok(_studentRepo.StudentCourse());
+            }
+            catch
+            {
+                return BadRequest("Not Added!");
+            }
+
+        }
 
     }
 }

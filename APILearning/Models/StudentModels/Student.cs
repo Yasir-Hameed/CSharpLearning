@@ -1,4 +1,6 @@
-﻿namespace APILearning.Models.StudentModels
+﻿using System.Collections.Generic;
+
+namespace APILearning.Models.StudentModels
 {
     public class Student
     {
@@ -10,6 +12,8 @@
   
         public int teacherId { get; set; }
         public Teacher teacher { get; set; }
+
+        public List<Course> course { get; set; }
 
     }
 }

@@ -9,6 +9,7 @@ namespace APILearning.StudentService
 
         public List<Student> GetStudents();
         public void UpdateStudent(Student student);
+        public List<Student> StudentCourse();
 
 
     }

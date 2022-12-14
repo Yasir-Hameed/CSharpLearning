@@ -8,7 +8,7 @@ namespace APILearning.StudentRepos
 {
     public class TeacherRepo : ITeacherRepo
     {
-        public static List<Teacher> TeachersList = new List<Teacher>();
+        public static List<Teacher> TeachersListDB = new List<Teacher>();
 
 
         private IStudentRepo _studentRepo;
@@ -21,7 +21,7 @@ namespace APILearning.StudentRepos
         {
             if (teacher != null)
             {
-                TeachersList.Add(teacher);
+                TeachersListDB.Add(teacher);
             }
 
         }
@@ -30,17 +30,17 @@ namespace APILearning.StudentRepos
         {
             var getStudents = _studentRepo.GetStudents();
 
-            foreach (var teacher in TeachersList)
+            foreach (var teacher in TeachersListDB)
             {
                 teacher.students = getStudents.Where(x => x.teacherId == teacher.Id).ToList();
             }
 
-            return TeachersList;
+            return TeachersListDB;
         }
 
         public void UpdateTeacher(Teacher teacher1)
         {
-            Teacher NewTeacher = TeachersList.Find(x => x.Salary == teacher1.Salary);
+            Teacher NewTeacher = TeachersListDB.Find(x => x.Salary == teacher1.Salary);
 
             NewTeacher.Name = teacher1.Name;
             NewTeacher.Age = teacher1.Age;
@@ -49,9 +49,9 @@ namespace APILearning.StudentRepos
         }
         public void DelTeacher(int salary)
         {
-            Teacher del = TeachersList.Find(x => x.Salary == salary);
+            Teacher del = TeachersListDB.Find(x => x.Salary == salary);
 
-            TeachersList.Remove(del);
+            TeachersListDB.Remove(del);
         }
 
 

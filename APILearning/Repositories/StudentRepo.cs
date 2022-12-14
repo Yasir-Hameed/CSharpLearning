@@ -1,5 +1,6 @@
 ﻿using APILearning.Models;
 using APILearning.Models.StudentModels;
+using APILearning.Repositories;
 using APILearning.StudentRepos;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,14 +28,16 @@ namespace APILearning.StudentService
         public List<Student> GetStudents()
         {
 
-            var teacherList = TeacherRepo.TeachersList;
+            var teacherList = TeacherRepo.TeachersListDB;
             foreach (var student in StudentsListDb)
             {
+
                 student.teacher = teacherList.FirstOrDefault(x => x.Id == student.teacherId);
             }
             return StudentsListDb;
+//return StudentsListDb.ToList();
         }
-
+        
         public void UpdateStudent(Student updatedStudent)
         {
             Student prvStudent = StudentsListDb.Find(x => x.Id == updatedStudent.Id);
@@ -45,6 +48,16 @@ namespace APILearning.StudentService
             prvStudent.Mail = updatedStudent.Mail;
             prvStudent.Marks = updatedStudent.Marks;
 
+        }
+        public List<Student> StudentCourse()
+        {
+            var listofcourse = CourseRepo.CourseDB;
+
+            foreach (var item in StudentsListDb)
+            {
+                item.course = listofcourse.Where(x => x.studentId == item.Id).ToList();
+            }
+            return StudentsListDb;
         }
         
         

@@ -29,9 +29,9 @@ namespace APILearning.Controllers
         }
 
         [HttpPut("UpdateTeacher")]
-        public IActionResult UpdateTeacher(Teacher teacher2)
+        public IActionResult UpdateTeacher(Teacher teacher)
         {
-            teacherRepo.UpdateTeacher(teacher2);
+            teacherRepo.UpdateTeacher(teacher);
             return Ok();
         }
 

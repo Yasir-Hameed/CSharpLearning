@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using APILearning.Repositories;
 using APILearning.StudentRepos;
 using APILearning.StudentService;
 using Microsoft.AspNetCore.Builder;
@@ -29,8 +30,9 @@ namespace APILearning
         {
             // Topic: Service Lifetime: SingleTon, Scoped, and Transient
 
-            services.AddSingleton<IStudentRepo, StudentRepo>();
-            services.AddSingleton<ITeacherRepo, TeacherRepo>();
+            services.AddScoped<IStudentRepo, StudentRepo>();
+            services.AddScoped<ITeacherRepo, TeacherRepo>();
+            services.AddScoped<ICourse, CourseRepo>();
 
 
             services.AddControllers();
