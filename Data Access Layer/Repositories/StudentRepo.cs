@@ -1,22 +1,23 @@
-﻿using APILearning.Models;
-using APILearning.Models.StudentModels;
-using APILearning.Repositories;
+﻿using APILearning.Repositories;
 using APILearning.StudentRepos;
+using Domain_Entity;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace APILearning.StudentService
+namespace Data_Access_Layer
 {
     public class StudentRepo : IStudentRepo
     {
         public static List<Student> StudentsListDb = new List<Student>();
 
-        public void AddStudent(Student student)
+        public Student AddStudent(Student student)
         {
             try
             {
                 if (student != null)
-                    StudentsListDb.Add(student);
+                  StudentsListDb.Add(student);
+                return student;
+                
             }
             catch (System.Exception)
             {
@@ -38,7 +39,7 @@ namespace APILearning.StudentService
 //return StudentsListDb.ToList();
         }
         
-        public void UpdateStudent(Student updatedStudent)
+        public Student UpdateStudent(Student updatedStudent)
         {
             Student prvStudent = StudentsListDb.Find(x => x.Id == updatedStudent.Id);
 
@@ -47,7 +48,7 @@ namespace APILearning.StudentService
             prvStudent.LName = updatedStudent.LName;
             prvStudent.Mail = updatedStudent.Mail;
             prvStudent.Marks = updatedStudent.Marks;
-
+            return prvStudent;
         }
         public List<Student> StudentCourse()
         {

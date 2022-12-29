@@ -1,5 +1,6 @@
-﻿using APILearning.Models.StudentModels;
-using APILearning.StudentService;
+﻿using Data_Access_Layer;
+using Domain_Entity;
+
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -20,8 +21,8 @@ namespace APILearning.Controllers
         {
             try
             { 
-                _studentRepo.AddStudent(student);
-                return Ok();
+              var GetStudent =  _studentRepo.AddStudent(student);
+                return Ok(GetStudent);
             }
             catch
             {
@@ -49,8 +50,8 @@ namespace APILearning.Controllers
         {
             try
             {
-                _studentRepo.UpdateStudent(student);
-                return Ok();
+                var UpdatedStudent = _studentRepo.UpdateStudent(student);
+                return Ok(UpdatedStudent);
             }
             catch
             {

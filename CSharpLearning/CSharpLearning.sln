@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP", "..\OOP\OOP.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{8A12CB7C-7622-47B2-857C-B91160AF89AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APILearning", "..\APILearning\APILearning.csproj", "{5BFC7979-B03B-40CD-A362-D62B84FC8FC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APILearning", "..\APILearning\APILearning.csproj", "{5BFC7979-B03B-40CD-A362-D62B84FC8FC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain Entity", "..\Domain Entity\Domain Entity.csproj", "{7690F1AC-A78C-4B3F-BBD3-05E51C30866D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access Layer", "..\Data Access Layer\Data Access Layer.csproj", "{A735DF45-5B38-4220-9BB8-7205D0C6759C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{5BFC7979-B03B-40CD-A362-D62B84FC8FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BFC7979-B03B-40CD-A362-D62B84FC8FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BFC7979-B03B-40CD-A362-D62B84FC8FC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7690F1AC-A78C-4B3F-BBD3-05E51C30866D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7690F1AC-A78C-4B3F-BBD3-05E51C30866D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7690F1AC-A78C-4B3F-BBD3-05E51C30866D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7690F1AC-A78C-4B3F-BBD3-05E51C30866D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A735DF45-5B38-4220-9BB8-7205D0C6759C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A735DF45-5B38-4220-9BB8-7205D0C6759C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A735DF45-5B38-4220-9BB8-7205D0C6759C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A735DF45-5B38-4220-9BB8-7205D0C6759C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

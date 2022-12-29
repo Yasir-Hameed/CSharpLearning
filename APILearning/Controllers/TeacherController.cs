@@ -41,11 +41,7 @@ namespace APILearning.Controllers
         {
             var result =   teacherRepo.GetTeacher();
             
-            var json = JsonConvert.SerializeObject(result, Formatting.Indented,
-                    new JsonSerializerSettings()
-                    {
-                        ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                    });
+            var json = JsonConvert.SerializeObject(result);
             
             return json;
 

@@ -27,7 +27,6 @@ namespace APILearning.Controllers
         [HttpGet]
         public IActionResult GetAllCourse()
         {
-            Course.
            var listcourse= Course.AllCourse();
             return Ok(listcourse);
         }
